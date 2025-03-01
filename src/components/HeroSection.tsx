@@ -1,8 +1,17 @@
-
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { 
+  ArrowRight, 
+  Github, 
+  Linkedin, 
+  FileText, 
+  Code, 
+  Bot,
+  MessageSquare,
+  BookOpen
+} from "lucide-react";
 
 export default function HeroSection() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -161,6 +170,98 @@ export default function HeroSection() {
             </Button>
           </motion.div>
         </motion.div>
+
+        <div className="mt-8 flex flex-wrap items-center gap-4">
+          <motion.a
+            href="#" // Replace with actual resume link
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: 1.6 }}
+          >
+            <FileText size={18} />
+            <span>Resume</span>
+          </motion.a>
+          
+          <motion.a
+            href="https://linkedin.com/" // Replace with actual LinkedIn link
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: 1.7 }}
+          >
+            <Linkedin size={18} />
+            <span>LinkedIn</span>
+          </motion.a>
+          
+          <motion.a
+            href="https://github.com/" // Replace with actual GitHub link
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: 1.8 }}
+          >
+            <Github size={18} />
+            <span>GitHub</span>
+          </motion.a>
+          
+          <motion.a
+            href="https://huggingface.co/" // Replace with actual HuggingFace link
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: 1.9 }}
+          >
+            <Bot size={18} />
+            <span>HuggingFace</span>
+          </motion.a>
+          
+          <motion.a
+            href="https://kaggle.com/" // Replace with actual Kaggle link
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: 2.0 }}
+          >
+            <Code size={18} />
+            <span>Kaggle</span>
+          </motion.a>
+          
+          <motion.a
+            href="https://wa.me/1234567890" // Replace with actual WhatsApp link
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: 2.1 }}
+          >
+            <MessageSquare size={18} />
+            <span>WhatsApp</span>
+          </motion.a>
+        </div>
 
         <motion.div
           variants={itemVariants}

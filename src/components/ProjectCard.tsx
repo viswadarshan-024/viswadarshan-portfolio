@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { ArrowUpRight, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -23,7 +22,7 @@ export default function ProjectCard({
   index,
 }: ProjectCardProps) {
   return (
-    <div className="group overflow-hidden rounded-lg bg-white dark:bg-gray-950 shadow-md dark:shadow-gray-800/20 border border-gray-200 dark:border-gray-800 transition-all duration-300 hover:shadow-xl">
+    <div className="group overflow-hidden rounded-lg bg-white dark:bg-gray-950 shadow-md dark:shadow-gray-800/20 border border-gray-200 dark:border-gray-800 transition-all duration-300 hover:shadow-xl h-full flex flex-col">
       <div className="relative overflow-hidden aspect-video">
         <motion.img
           src={image}
@@ -42,7 +41,7 @@ export default function ProjectCard({
         />
       </div>
       
-      <div className="p-5 sm:p-6">
+      <div className="p-5 sm:p-6 flex flex-col flex-grow">
         <div className="flex flex-wrap gap-2 mb-3">
           {tags.map((tag, i) => (
             <motion.span
@@ -72,7 +71,7 @@ export default function ProjectCard({
         </motion.h3>
         
         <motion.p 
-          className="text-gray-600 dark:text-gray-400 text-sm mb-4"
+          className="text-gray-600 dark:text-gray-400 text-sm mb-4 flex-grow"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: 0.1 }}
@@ -81,7 +80,7 @@ export default function ProjectCard({
         </motion.p>
         
         <motion.div 
-          className="flex flex-wrap gap-3"
+          className="flex flex-wrap gap-3 mt-auto"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: 0.2 }}

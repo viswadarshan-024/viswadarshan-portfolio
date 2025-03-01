@@ -1,6 +1,6 @@
 
 import { motion } from "framer-motion";
-import { Award, BookOpen, Briefcase, Cpu } from "lucide-react";
+import { Award, BookOpen, Briefcase, Cpu, Heart, Target } from "lucide-react";
 
 export default function AboutSection() {
   const skills = [
@@ -110,10 +110,51 @@ export default function AboutSection() {
               When I'm not coding or designing, you can find me exploring new technologies, contributing to open-source projects, or enjoying the outdoors. I believe in continuous learning and pushing the boundaries of what's possible in the digital space.
             </motion.p>
 
+            {/* Passion & Mission Section */}
+            <motion.div 
+              className="mb-8 p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm"
+              variants={fadeInUpVariants}
+              transition={{ delay: 0.2 }}
+            >
+              <div className="flex flex-col space-y-6">
+                <motion.div 
+                  className="flex items-start gap-4"
+                  whileHover={{ x: 5 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Heart className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-display font-medium text-lg mb-2">My Passion</h3>
+                    <p className="text-gray-600 dark:text-gray-400">
+                      I'm passionate about bridging technology and human needs. I find joy in solving complex problems with elegant solutions that enhance user experiences. My drive comes from seeing how the right technology can transform everyday challenges into opportunities for innovation.
+                    </p>
+                  </div>
+                </motion.div>
+                
+                <motion.div 
+                  className="flex items-start gap-4"
+                  whileHover={{ x: 5 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Target className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-display font-medium text-lg mb-2">My Mission</h3>
+                    <p className="text-gray-600 dark:text-gray-400">
+                      My mission is to create technology that makes a positive impact on people's lives. I aim to develop solutions that are accessible, intuitive, and powerful. Through my work, I strive to contribute to a more connected and efficient digital future while maintaining focus on ethical considerations and user privacy.
+                    </p>
+                  </div>
+                </motion.div>
+              </div>
+            </motion.div>
+
             <motion.div 
               className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8"
               variants={fadeInUpVariants}
-              transition={{ delay: 0.2 }}
+              transition={{ delay: 0.3 }}
             >
               <motion.div 
                 className="flex items-center gap-3"
@@ -174,7 +215,7 @@ export default function AboutSection() {
 
             <motion.div
               variants={fadeInUpVariants}
-              transition={{ delay: 0.3 }}
+              transition={{ delay: 0.4 }}
             >
               <h3 className="font-medium mb-3">Skills</h3>
               <div className="flex flex-wrap gap-2">
