@@ -14,18 +14,27 @@ export default function Layout() {
       if (!showSpotlight) setShowSpotlight(true);
     };
 
+    const handleTouchMove = (e: TouchEvent) => {
+      if (e.touches.length > 0) {
+        setSpotlightPosition({ x: e.touches[0].clientX, y: e.touches[0].clientY });
+        if (!showSpotlight) setShowSpotlight(true);
+      }
+    };
+
     window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("touchmove", handleTouchMove);
 
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("touchmove", handleTouchMove);
     };
   }, [showSpotlight]);
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen relative overflow-hidden">
       {showSpotlight && (
         <div
-          className="spotlight"
+          className="spotlight pointer-events-none fixed"
           style={{
             left: `${spotlightPosition.x}px`,
             top: `${spotlightPosition.y}px`
