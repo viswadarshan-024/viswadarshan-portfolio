@@ -56,7 +56,7 @@ export default function ContactSection() {
             Get in Touch
           </h2>
           <p className="max-w-2xl mx-auto text-gray-600 dark:text-gray-400">
-            Have a project in mind or want to discuss potential collaborations? I'd love to hear from you.
+            Looking forward to connecting with like-minded AI enthusiasts, researchers, and innovators! Feel free to drop a message or reach out via LinkedIn or email.
           </p>
         </motion.div>
 
@@ -79,8 +79,8 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">Email</h4>
-                    <a href="mailto:hello@example.com" className="text-black dark:text-white hover:underline">
-                      hello@example.com
+                    <a href="mailto:viswadarshanrramiya@gmail.com" className="text-black dark:text-white hover:underline">
+                      viswadarshanrramiya@gmail.com
                     </a>
                   </div>
                 </div>
@@ -91,8 +91,8 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">Phone</h4>
-                    <a href="tel:+11234567890" className="text-black dark:text-white hover:underline">
-                      +1 (123) 456-7890
+                    <a href="tel:+916380403325" className="text-black dark:text-white hover:underline">
+                      +91 63804 03325
                     </a>
                   </div>
                 </div>
@@ -104,7 +104,7 @@ export default function ContactSection() {
                   <div>
                     <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">Location</h4>
                     <p className="text-black dark:text-white">
-                      San Francisco, CA
+                      Madurai, Tamil Nadu
                     </p>
                   </div>
                 </div>
@@ -115,7 +115,7 @@ export default function ContactSection() {
                   Availability
                 </h4>
                 <p className="text-black dark:text-white text-sm">
-                  I'm currently available for freelance work and long-term collaborations.
+                  Currently based in Madurai, open to collaborations globally!
                 </p>
               </div>
             </div>
@@ -164,7 +164,7 @@ export default function ContactSection() {
                 </div>
               </div>
               
-              <div className="space-y-2 mb-6">
+{/*               <div className="space-y-2 mb-6">
                 <label htmlFor="subject" className="text-sm font-medium text-gray-700 dark:text-gray-300">
                   Subject
                 </label>
@@ -176,7 +176,7 @@ export default function ContactSection() {
                   placeholder="Project Inquiry"
                   required
                 />
-              </div>
+              </div> */}
               
               <div className="space-y-2 mb-6">
                 <label htmlFor="message" className="text-sm font-medium text-gray-700 dark:text-gray-300">
@@ -187,7 +187,7 @@ export default function ContactSection() {
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  placeholder="Tell me about your project..."
+                  placeholder="Tell me about your query..."
                   rows={5}
                   required
                 />
