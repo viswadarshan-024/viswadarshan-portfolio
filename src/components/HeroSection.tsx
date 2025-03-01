@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
@@ -47,7 +48,7 @@ export default function HeroSection() {
       transition: {
         duration: 3,
         repeat: Infinity,
-        repeatType: "loop" as const,
+        repeatType: "loop",
         ease: "easeInOut",
       },
     },
@@ -171,7 +172,7 @@ export default function HeroSection() {
           </motion.div>
         </motion.div>
 
-        <div className="mt-8 flex flex-wrap items-center gap-4">
+        <div className="mt-8 flex flex-wrap justify-center items-center gap-4">
           <motion.a
             href="#" // Replace with actual resume link
             target="_blank"
@@ -264,7 +265,6 @@ export default function HeroSection() {
         </div>
 
         <motion.div
-          variants={itemVariants}
           initial="initial"
           animate="animate"
           variants={floatingVariants}

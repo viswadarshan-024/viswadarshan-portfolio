@@ -1,84 +1,99 @@
 
 import { motion } from "framer-motion";
+import { Copy, Check, Code, ExternalLink } from "lucide-react";
 import { useState } from "react";
-import { Copy, Check } from "lucide-react";
 import { Button } from "./ui/button";
 
 export default function CodeSnippetsSection() {
-  const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
-
   const codeSnippets = [
     {
       title: "Responsive Card Component",
       language: "jsx",
-      code: `const Card = ({ title, description, imageUrl }) => {
+      description: "A reusable and responsive card component with Tailwind CSS",
+      code: `function Card({ title, description, image, link }) {
   return (
-    <div className="rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
-      <img src={imageUrl} alt={title} className="w-full h-48 object-cover" />
-      <div className="p-4">
+    <div className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden 
+                  shadow-lg transition-all duration-300 hover:shadow-xl 
+                  hover:translate-y-[-5px]">
+      <img 
+        src={image} 
+        alt={title} 
+        className="w-full h-48 object-cover" 
+      />
+      <div className="p-6">
         <h3 className="text-xl font-semibold mb-2">{title}</h3>
-        <p className="text-gray-600">{description}</p>
+        <p className="text-gray-600 dark:text-gray-300 mb-4">
+          {description}
+        </p>
+        <a 
+          href={link} 
+          className="text-blue-500 hover:underline inline-flex items-center"
+        >
+          Learn more <ExternalLink className="ml-1 h-4 w-4" />
+        </a>
       </div>
     </div>
   );
-};`
+}`
     },
     {
-      title: "Animated Button Component",
+      title: "Animated Button",
       language: "jsx",
+      description: "A button component with hover animations using Framer Motion",
       code: `import { motion } from "framer-motion";
 
-const AnimatedButton = ({ children }) => {
+function AnimatedButton({ children, onClick }) {
   return (
     <motion.button
-      whileHover={{ scale: 1.05 }}
+      className="bg-gradient-to-r from-purple-500 to-indigo-600 
+                text-white font-medium py-2 px-6 rounded-full"
+      whileHover={{ 
+        scale: 1.05,
+        boxShadow: "0 10px 25px -5px rgba(124, 58, 237, 0.5)"
+      }}
       whileTap={{ scale: 0.95 }}
-      className="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-md"
+      onClick={onClick}
     >
       {children}
     </motion.button>
   );
-};`
+}`
     },
     {
-      title: "Dark Mode Toggle Hook",
+      title: "Dark Mode Toggle",
       language: "jsx",
+      description: "A custom dark mode toggle component with smooth transitions",
       code: `import { useState, useEffect } from "react";
+import { Sun, Moon } from "lucide-react";
 
-const useDarkMode = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+function DarkModeToggle() {
+  const [isDark, setIsDark] = useState(false);
   
   useEffect(() => {
-    const userPreference = localStorage.getItem("darkMode");
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    
-    setIsDarkMode(userPreference === "true" || (!userPreference && prefersDark));
-  }, []);
-  
-  useEffect(() => {
-    if (isDarkMode) {
+    if (isDark) {
       document.documentElement.classList.add("dark");
     } else {
       document.documentElement.classList.remove("dark");
     }
-    localStorage.setItem("darkMode", isDarkMode.toString());
-  }, [isDarkMode]);
-  
-  const toggleDarkMode = () => setIsDarkMode(!isDarkMode);
-  
-  return { isDarkMode, toggleDarkMode };
-};`
+  }, [isDark]);
+
+  return (
+    <button
+      className="p-2 rounded-full bg-gray-200 dark:bg-gray-800
+                transition-colors duration-300"
+      onClick={() => setIsDark(!isDark)}
+      aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+    >
+      {isDark ? (
+        <Sun className="h-5 w-5 text-yellow-400" />
+      ) : (
+        <Moon className="h-5 w-5 text-blue-800" />
+      )}
+    </button>
+  );
+}`
     }
   ];
-
-  const copyToClipboard = (code: string, index: number) => {
-    navigator.clipboard.writeText(code);
-    setCopiedIndex(index);
-    
-    setTimeout(() => {
-      setCopiedIndex(null);
-    }, 2000);
-  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -113,7 +128,7 @@ const useDarkMode = () => {
         >
           <h2 className="text-3xl md:text-4xl font-display font-semibold mb-4 relative">
             <span className="relative inline-block">
-              UI Code Snippets
+              UI Design Snippets
               <motion.span 
                 className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-primary/60 to-primary/30 rounded-full"
                 initial={{ width: 0 }}
@@ -123,7 +138,7 @@ const useDarkMode = () => {
             </span>
           </h2>
           <p className="max-w-2xl mx-auto text-gray-600 dark:text-gray-400">
-            Useful UI components and hooks to enhance your projects. Feel free to copy and use in your own work.
+            A collection of reusable UI components and design patterns to help you build beautiful interfaces.
           </p>
         </motion.div>
 
@@ -132,39 +147,71 @@ const useDarkMode = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
-          className="grid grid-cols-1 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {codeSnippets.map((snippet, index) => (
-            <motion.div
-              key={index}
-              variants={itemVariants}
-              className="bg-gray-50 dark:bg-gray-900 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300"
-            >
-              <div className="border-b border-gray-200 dark:border-gray-800 bg-gray-100 dark:bg-gray-800 px-4 py-3 flex justify-between items-center">
-                <h3 className="font-medium text-gray-800 dark:text-gray-200">{snippet.title}</h3>
-                <Button
-                  onClick={() => copyToClipboard(snippet.code, index)}
-                  variant="ghost"
-                  size="sm"
-                  className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
-                >
-                  {copiedIndex === index ? (
-                    <Check className="w-4 h-4 text-green-500" />
-                  ) : (
-                    <Copy className="w-4 h-4" />
-                  )}
-                  <span className="ml-2">{copiedIndex === index ? "Copied!" : "Copy"}</span>
-                </Button>
-              </div>
-              <div className="p-4 overflow-x-auto">
-                <pre className="text-sm text-gray-800 dark:text-gray-200 font-mono">
-                  <code>{snippet.code}</code>
-                </pre>
-              </div>
-            </motion.div>
+            <CodeSnippetCard key={index} snippet={snippet} index={index} />
           ))}
         </motion.div>
       </div>
     </section>
+  );
+}
+
+function CodeSnippetCard({ snippet, index }) {
+  const [copied, setCopied] = useState(false);
+
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(snippet.code);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
+  return (
+    <motion.div
+      variants={{
+        hidden: { opacity: 0, y: 20 },
+        visible: { 
+          opacity: 1, 
+          y: 0,
+          transition: {
+            duration: 0.5,
+            delay: index * 0.1
+          }
+        }
+      }}
+      className="bg-gray-50 dark:bg-gray-900 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300"
+    >
+      <div className="p-5 border-b border-gray-200 dark:border-gray-800 flex justify-between items-center">
+        <div>
+          <h3 className="font-display font-medium text-lg">{snippet.title}</h3>
+          <p className="text-sm text-gray-500 dark:text-gray-400">{snippet.description}</p>
+        </div>
+        <div>
+          <Button 
+            variant="ghost" 
+            size="icon" 
+            onClick={copyToClipboard}
+            className="text-gray-500 hover:text-primary"
+          >
+            {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
+          </Button>
+        </div>
+      </div>
+      <div className="p-5 bg-gray-900 dark:bg-black/50 overflow-x-auto">
+        <pre className="text-gray-300 text-sm">
+          <code>{snippet.code}</code>
+        </pre>
+      </div>
+      <div className="px-5 py-3 flex justify-between items-center">
+        <div className="flex items-center">
+          <Code className="h-4 w-4 text-gray-500 dark:text-gray-400 mr-2" />
+          <span className="text-xs text-gray-500 dark:text-gray-400">{snippet.language}</span>
+        </div>
+        <Button variant="ghost" size="sm" className="text-primary">
+          View Full Code
+        </Button>
+      </div>
+    </motion.div>
   );
 }
