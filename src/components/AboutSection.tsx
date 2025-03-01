@@ -136,35 +136,9 @@ export default function AboutSection() {
                 </div>
               </motion.div>
               
-              <motion.div className="flex items-center gap-3" whileHover={{
-              x: 5
-            }} transition={{
-              type: "spring",
-              stiffness: 300
-            }}>
-                <div className="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center flex-shrink-0">
-                  <Briefcase className="w-5 h-5 text-gray-700 dark:text-gray-300" />
-                </div>
-                <div>
-                  <h3 className="font-medium">Research</h3>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">4 Completed</p>
-                </div>
-              </motion.div>
               
-              <motion.div className="flex items-center gap-3" whileHover={{
-              x: 5
-            }} transition={{
-              type: "spring",
-              stiffness: 300
-            }}>
-                <div className="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center flex-shrink-0">
-                  <Award className="w-5 h-5 text-gray-700 dark:text-gray-300" />
-                </div>
-                <div>
-                  <h3 className="font-medium">Awards</h3>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">Best Design 2023</p>
-                </div>
-              </motion.div>
+              
+              
               
               <motion.div className="flex items-center gap-3" whileHover={{
               x: 5
