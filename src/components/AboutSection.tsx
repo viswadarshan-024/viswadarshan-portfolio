@@ -132,7 +132,7 @@ export default function AboutSection() {
                 </div>
                 <div>
                   <h3 className="font-medium">Education</h3>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">University of Technology</p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">TCE, Madurai</p>
                 </div>
               </motion.div>
               
@@ -146,8 +146,8 @@ export default function AboutSection() {
                   <Briefcase className="w-5 h-5 text-gray-700 dark:text-gray-300" />
                 </div>
                 <div>
-                  <h3 className="font-medium">Experience</h3>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">5+ Years</p>
+                  <h3 className="font-medium">Research</h3>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">4 Completed</p>
                 </div>
               </motion.div>
               
@@ -177,7 +177,7 @@ export default function AboutSection() {
                 </div>
                 <div>
                   <h3 className="font-medium">Projects</h3>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">50+ Completed</p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">15+ Completed</p>
                 </div>
               </motion.div>
             </motion.div>
