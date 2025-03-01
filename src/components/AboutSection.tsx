@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Award, BookOpen, Briefcase, Cpu, Heart, Target } from "lucide-react";
 export default function AboutSection() {
-  const skills = ["UX/UI Design", "Front-end Development", "Back-end Development", "Mobile App Development", "Responsive Design", "API Integration", "Performance Optimization", "Accessibility"];
+  const skills = ["Python", "Natural Language Processing", "Generative AI", "Deep Learning", "Machine Learning", "Android Studio", "Java", "Team Leadership"];
   const fadeInUpVariants = {
     hidden: {
       opacity: 0,
