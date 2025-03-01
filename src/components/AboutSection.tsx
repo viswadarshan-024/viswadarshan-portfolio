@@ -75,11 +75,11 @@ export default function AboutSection() {
               About Me
             </motion.h2>
             
-            <motion.p className="text-gray-600 dark:text-gray-400 mb-6" variants={fadeInUpVariants}>I'm a passionate AI Developer specializing in NLP, Generative AI with a strong focus on low-resource languages like Tamil. I’ve had the opportunity to work in Tamil language processing, bridging cutting-edge research and real-world AI applications, including custom tokenizer development, LLM fine-tuning, and multilingual AI solutions.</motion.p>
+            <motion.p className="text-gray-600 dark:text-gray-400 mb-6" variants={fadeInUpVariants}>I am a pre-final year B.Tech student in Computer Science and Business Systems, specializing in Natural Language Processing (NLP), Generative AI, and AI system development. My expertise lies in low-resource language processing, LLM fine-tuning, tokenization, and scalable AI deployment.</motion.p>
             
             <motion.p className="text-gray-600 dark:text-gray-400 mb-8" variants={fadeInUpVariants} transition={{
             delay: 0.1
-          }}>I thrive on solving complex AI challenges with speed and precision, building impactful systems like multilingual chatbots, AI-driven learning platforms, and storytelling AI. With expertise in LLM engineering, RAG systems, and scalable AI deployment, I am committed to making AI more accessible and impactful.</motion.p>
+          }}>I actively work on AI research and real-world applications, including multilingual chatbots, AI-driven learning platforms, and storytelling AI. With a deep technical focus, I build efficient and high-performing AI models while continuously exploring new advancements in the field.</motion.p>
 
             {/* Passion & Mission Section */}
             <motion.div className="mb-8 p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm" variants={fadeInUpVariants} transition={{
@@ -97,9 +97,7 @@ export default function AboutSection() {
                   </div>
                   <div>
                     <h3 className="font-display font-medium text-lg mb-2">My Passion</h3>
-                    <p className="text-gray-600 dark:text-gray-400">
-                      I'm passionate about bridging technology and human needs. I find joy in solving complex problems with elegant solutions that enhance user experiences. My drive comes from seeing how the right technology can transform everyday challenges into opportunities for innovation.
-                    </p>
+                    <p className="text-gray-600 dark:text-gray-400">I am deeply passionate about Natural Language Processing, Generative AI, and multilingual AI systems, with a strong focus on low-resource languages like Tamil. I thrive on solving complex AI challenges, from custom tokenization and LLM fine-tuning to real-world AI applications that make AI more accessible, efficient, and impactful.</p>
                   </div>
                 </motion.div>
                 
@@ -114,9 +112,7 @@ export default function AboutSection() {
                   </div>
                   <div>
                     <h3 className="font-display font-medium text-lg mb-2">My Mission</h3>
-                    <p className="text-gray-600 dark:text-gray-400">
-                      My mission is to create technology that makes a positive impact on people's lives. I aim to develop solutions that are accessible, intuitive, and powerful. Through my work, I strive to contribute to a more connected and efficient digital future while maintaining focus on ethical considerations and user privacy.
-                    </p>
+                    <p className="text-gray-600 dark:text-gray-400">My mission is to advance AI research and development by building scalable, high-performance AI models and applications. I aim to bridge the gap between cutting-edge AI research and real-world implementation, ensuring that AI serves diverse linguistic and cultural communities. Through continuous learning, experimentation, and innovation, I strive to push the boundaries of AI-driven language understanding and human-computer interaction.</p>
                   </div>
                 </motion.div>
               </div>
