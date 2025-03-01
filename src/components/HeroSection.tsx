@@ -48,7 +48,7 @@ export default function HeroSection() {
       transition: {
         duration: 3,
         repeat: Infinity,
-        repeatType: "loop",
+        repeatType: "loop" as "loop",
         ease: "easeInOut",
       },
     },
