@@ -149,7 +149,7 @@ export default function HeroSection() {
         </motion.div>
 
         <div className="mt-8 flex flex-wrap justify-center items-center gap-4">
-          <motion.a href="#" // Replace with actual resume link
+          <motion.a href="https://drive.google.com/file/d/1O0GJnvqjsQZdxP48Xy9gA7ojm4EXIJYw/view" // Replace with actual resume link
         target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" whileHover={{
           scale: 1.05
         }} whileTap={{
