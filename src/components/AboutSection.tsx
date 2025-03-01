@@ -50,7 +50,7 @@ export default function AboutSection() {
               <motion.div className="absolute inset-0 rounded-xl bg-gradient-to-tr from-black/5 to-black/30 dark:from-white/5 dark:to-white/10" whileHover={{
               opacity: 0.7
             }} />
-              <motion.img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d" alt="Portrait image" className="rounded-xl shadow-xl w-full aspect-[4/5] object-cover" loading="lazy" whileHover={{
+              <motion.img src="public/me.jpg" alt="Portrait image" className="rounded-xl shadow-xl w-full aspect-[4/5] object-cover" loading="lazy" whileHover={{
               scale: 1.03
             }} transition={{
               duration: 0.3
