@@ -168,7 +168,7 @@ export default function HeroSection() {
             <span>Resume</span>
           </motion.a>
           
-          <motion.a href="https://linkedin.com/" // Replace with actual LinkedIn link
+          <motion.a href="https://www.linkedin.com/in/viswadarshan-r-r-68b8b124b/" // Replace with actual LinkedIn link
         target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" whileHover={{
           scale: 1.05
         }} whileTap={{
@@ -187,7 +187,7 @@ export default function HeroSection() {
             <span>LinkedIn</span>
           </motion.a>
           
-          <motion.a href="https://github.com/" // Replace with actual GitHub link
+          <motion.a href="https://github.com/viswadarshan-024" // Replace with actual GitHub link
         target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" whileHover={{
           scale: 1.05
         }} whileTap={{
@@ -206,7 +206,7 @@ export default function HeroSection() {
             <span>GitHub</span>
           </motion.a>
           
-          <motion.a href="https://huggingface.co/" // Replace with actual HuggingFace link
+          <motion.a href="https://huggingface.co/viswadarshan06" // Replace with actual HuggingFace link
         target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" whileHover={{
           scale: 1.05
         }} whileTap={{
@@ -225,7 +225,7 @@ export default function HeroSection() {
             <span>HuggingFace</span>
           </motion.a>
           
-          <motion.a href="https://kaggle.com/" // Replace with actual Kaggle link
+          <motion.a href="https://www.kaggle.com/viswadarshanrr" // Replace with actual Kaggle link
         target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" whileHover={{
           scale: 1.05
         }} whileTap={{
@@ -244,7 +244,7 @@ export default function HeroSection() {
             <span>Kaggle</span>
           </motion.a>
           
-          <motion.a href="https://wa.me/1234567890" // Replace with actual WhatsApp link
+          <motion.a href="https://wa.me/6380403325" // Replace with actual WhatsApp link
         target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" whileHover={{
           scale: 1.05
         }} whileTap={{
