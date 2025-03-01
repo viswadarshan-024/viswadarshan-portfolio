@@ -164,7 +164,7 @@ export default function ContactSection() {
                 </div>
               </div>
               
-{/*               <div className="space-y-2 mb-6">
+              <div className="space-y-2 mb-6">
                 <label htmlFor="subject" className="text-sm font-medium text-gray-700 dark:text-gray-300">
                   Subject
                 </label>
@@ -176,7 +176,7 @@ export default function ContactSection() {
                   placeholder="Project Inquiry"
                   required
                 />
-              </div> */}
+              </div>
               
               <div className="space-y-2 mb-6">
                 <label htmlFor="message" className="text-sm font-medium text-gray-700 dark:text-gray-300">
