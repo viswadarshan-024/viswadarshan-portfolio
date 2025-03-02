@@ -3,12 +3,16 @@ import { Outlet } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Layout() {
   const [spotlightPosition, setSpotlightPosition] = useState({ x: 0, y: 0 });
   const [showSpotlight, setShowSpotlight] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
+    setIsLoaded(true);
+    
     const handleMouseMove = (e: MouseEvent) => {
       setSpotlightPosition({ x: e.clientX, y: e.clientY });
       if (!showSpotlight) setShowSpotlight(true);
@@ -69,16 +73,28 @@ export default function Layout() {
     };
   }, [showSpotlight]);
 
+  const pageVariants = {
+    initial: { opacity: 0 },
+    animate: { 
+      opacity: 1,
+      transition: { duration: 0.5 }
+    },
+    exit: { 
+      opacity: 0,
+      transition: { duration: 0.3 }
+    }
+  };
+
   return (
     <div className="flex flex-col min-h-screen relative overflow-hidden">
       {/* Background gradient */}
-      <div className="fixed inset-0 bg-gradient-to-br from-white to-gray-100 dark:from-gray-950 dark:to-gray-900 -z-10"></div>
+      <div className="fixed inset-0 bg-gradient-to-br from-gray-950 to-gray-900 -z-10"></div>
       
       {/* Particle container */}
       <div id="particle-container" className="fixed inset-0 pointer-events-none -z-5"></div>
       
       {/* Animated gradient background */}
-      <div className="fixed inset-0 bg-grid-small-black/[0.02] dark:bg-grid-small-white/[0.02] -z-5 mask-radial-faded"></div>
+      <div className="fixed inset-0 bg-grid-small-white/[0.02] -z-5 mask-radial-faded"></div>
       
       {/* Animated blobs */}
       <div className="fixed top-0 left-0 right-0 bottom-0 pointer-events-none overflow-hidden -z-5">
@@ -88,18 +104,33 @@ export default function Layout() {
       </div>
       
       {showSpotlight && (
-        <div
+        <motion.div
           className="spotlight pointer-events-none fixed z-0"
-          style={{
-            left: `${spotlightPosition.x}px`,
-            top: `${spotlightPosition.y}px`
+          animate={{
+            left: spotlightPosition.x,
+            top: spotlightPosition.y,
+            opacity: 1
           }}
+          initial={{ opacity: 0 }}
+          transition={{ type: "spring", damping: 15, stiffness: 90 }}
         />
       )}
+      
       <Navbar />
-      <main className="flex-grow overflow-hidden relative z-10">
-        <Outlet />
-      </main>
+      
+      <AnimatePresence mode="wait">
+        <motion.main 
+          className="flex-grow overflow-hidden relative z-10"
+          key={window.location.pathname}
+          variants={pageVariants}
+          initial="initial"
+          animate="animate"
+          exit="exit"
+        >
+          <Outlet />
+        </motion.main>
+      </AnimatePresence>
+      
       <Footer />
     </div>
   );

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Github, Linkedin, FileText, Code, Bot, MessageSquare, BookOpen } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function HeroSection() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -40,7 +41,7 @@ export default function HeroSection() {
     }
   };
   
-  // Fixed the repeatType to be a specific allowed value
+  // Fixed the animation to use proper types
   const floatingVariants = {
     initial: {
       y: 0
@@ -50,7 +51,7 @@ export default function HeroSection() {
       transition: {
         duration: 3,
         repeat: Infinity,
-        repeatType: "loop", // Fixed: Using "loop" which is a valid value
+        repeatType: "loop" as const, // Fixed: Using type assertion to match expected types
         ease: "easeInOut"
       }
     }
@@ -125,7 +126,7 @@ export default function HeroSection() {
           </motion.span>
         </motion.h1>
 
-        <motion.p variants={itemVariants} className="max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-400 mb-8">I'm an AI Developer & Researcher specializing in NLP, Generative AI, focusing on building efficient, scalable, and impactful AI solutions. Let's innovate and push the boundaries of AI together!</motion.p>
+        <motion.p variants={itemVariants} className="max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-400 mb-8">I'm an AI Developer & Researcher specializing in NLP, Generative AI, focusing on building efficient, scalable, and impactful AI solutions. Let's innovate and push the boundaries of AI together!</motion.p>
 
         <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <motion.div whileHover={{
@@ -137,8 +138,10 @@ export default function HeroSection() {
           stiffness: 400,
           damping: 10
         }}>
-            <Button size="lg" className="rounded-full px-6">
-              View Projects
+            <Button size="lg" className="rounded-full px-6" asChild>
+              <Link to="/projects">
+                View Projects <ArrowRight className="ml-1" />
+              </Link>
             </Button>
           </motion.div>
           
@@ -151,8 +154,10 @@ export default function HeroSection() {
           stiffness: 400,
           damping: 10
         }}>
-            <Button variant="outline" size="lg" className="rounded-full px-6">
-              Get in Touch
+            <Button variant="outline" size="lg" className="rounded-full px-6" asChild>
+              <Link to="/contact">
+                Get in Touch
+              </Link>
             </Button>
           </motion.div>
         </motion.div>
@@ -273,14 +278,26 @@ export default function HeroSection() {
           </motion.a>
         </div>
 
-        <motion.div initial="initial" animate="animate" variants={floatingVariants} className="absolute bottom-10 left-1/2 transform -translate-x-1/2">
-          <motion.div whileHover={{
-          scale: 1.2
-        }} whileTap={{
-          scale: 0.9
-        }}>
-            <Button variant="ghost" size="icon" onClick={scrollToNext} aria-label="Scroll to next section" className="animate-bounce font-normal">
-              <ArrowDown className="h-6 w-6" />
+        <motion.div 
+          className="absolute bottom-12 left-1/2 transform -translate-x-1/2"
+          initial="initial"
+          animate="animate"
+          variants={floatingVariants}
+        >
+          <motion.div 
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.9 }}
+            className="flex flex-col items-center gap-2"
+          >
+            <span className="text-sm text-gray-500 dark:text-gray-400">Scroll Down</span>
+            <Button 
+              variant="ghost" 
+              size="icon" 
+              onClick={scrollToNext} 
+              aria-label="Scroll to next section"
+              className="h-10 w-10 rounded-full bg-white/20 dark:bg-gray-800/30 backdrop-blur-sm"
+            >
+              <ArrowDown className="h-5 w-5" />
             </Button>
           </motion.div>
         </motion.div>
