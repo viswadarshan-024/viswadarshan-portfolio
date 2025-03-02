@@ -87,10 +87,10 @@ const About = () => {
               <div className="w-full md:w-2/3">
                 <h2 className="text-2xl font-display font-semibold mb-4">My Story</h2>
                 <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  I'm a passionate designer and developer with over 5 years of experience creating digital experiences that users love. My journey started with a fascination for the intersection of design and technology, which led me to pursue formal education in both fields.
+                  I am a pre-final year B.Tech student in Computer Science and Business Systems, specializing in Natural Language Processing (NLP), Generative AI, and AI system development. My expertise lies in low-resource language processing, LLM fine-tuning, tokenization, and scalable AI deployment.
                 </p>
                 <p className="text-gray-600 dark:text-gray-400">
-                  Today, I specialize in building clean, functional, and user-centered digital experiences. I believe that design should be both beautiful and purposeful, focusing on solving real problems for users while maintaining aesthetic appeal.
+                  I actively work on AI research and real-world applications, including multilingual chatbots, AI-driven learning platforms, and storytelling AI. With a deep technical focus, I build efficient and high-performing AI models while continuously exploring new advancements in the field.
                 </p>
               </div>
             </div>
@@ -104,9 +104,9 @@ const About = () => {
                 <div className="w-12 h-12 rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center mb-4">
                   <Code className="w-6 h-6 text-gray-700 dark:text-gray-300" />
                 </div>
-                <h3 className="text-xl font-display font-medium mb-2">Development</h3>
+                <h3 className="text-xl font-display font-medium mb-2">AI Research & Development</h3>
                 <p className="text-gray-600 dark:text-gray-400 text-sm">
-                  I build robust applications using modern technologies and best practices.
+                  I design and build cutting-edge AI models focused on NLP, LLM fine-tuning, and multilingual AI solutions.
                 </p>
               </div>
               
@@ -114,9 +114,9 @@ const About = () => {
                 <div className="w-12 h-12 rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center mb-4">
                   <User className="w-6 h-6 text-gray-700 dark:text-gray-300" />
                 </div>
-                <h3 className="text-xl font-display font-medium mb-2">UI/UX Design</h3>
+                <h3 className="text-xl font-display font-medium mb-2">LLM Engineering & Optimization</h3>
                 <p className="text-gray-600 dark:text-gray-400 text-sm">
-                  I create intuitive interfaces and enjoyable user experiences.
+                  I develop and optimize LLM-based applications, including custom tokenizers, RAG systems, and scalable AI deployments.
                 </p>
               </div>
               
@@ -124,9 +124,9 @@ const About = () => {
                 <div className="w-12 h-12 rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center mb-4">
                   <Coffee className="w-6 h-6 text-gray-700 dark:text-gray-300" />
                 </div>
-                <h3 className="text-xl font-display font-medium mb-2">Consultation</h3>
+                <h3 className="text-xl font-display font-medium mb-2">End-to-End AI Application Development</h3>
                 <p className="text-gray-600 dark:text-gray-400 text-sm">
-                  I provide expert advice on digital strategy and implementation.
+                  I create real-world AI solutions, such as multilingual AI systems, Agentic AI platforms, and generative AI applications.
                 </p>
               </div>
             </div>
