@@ -43,7 +43,7 @@ export default function Footer() {
             <h3 className="font-medium text-sm">Connect</h3>
             <div className="flex space-x-4">
               <a 
-                href="#" 
+                href="https://github.com/viswadarshan-024" 
                 target="_blank" 
                 rel="noreferrer" 
                 className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 transition"
@@ -52,7 +52,7 @@ export default function Footer() {
                 <Github size={18} />
               </a>
               <a 
-                href="#" 
+                href="https://www.linkedin.com/in/viswadarshan-r-r-68b8b124b/" 
                 target="_blank" 
                 rel="noreferrer" 
                 className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 transition"
@@ -70,7 +70,7 @@ export default function Footer() {
                 <Twitter size={18} />
               </a>
               <a 
-                href="mailto:hello@example.com" 
+                href="mailto:viswadarshanrramiya@gmail.com" 
                 className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 transition"
                 aria-label="Email"
               >
