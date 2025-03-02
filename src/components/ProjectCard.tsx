@@ -23,22 +23,29 @@ export default function ProjectCard({
   index,
 }: ProjectCardProps) {
   return (
-    <div className="group overflow-hidden rounded-lg bg-white dark:bg-gray-950 shadow-md dark:shadow-gray-800/20 border border-gray-200 dark:border-gray-800 transition-all duration-300 hover:shadow-xl h-full flex flex-col">
+    <motion.div 
+      className="group overflow-hidden rounded-lg bg-white dark:bg-gray-950 shadow-md dark:shadow-gray-800/20 border border-gray-200 dark:border-gray-800 transition-all duration-300 hover:shadow-xl h-full flex flex-col"
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      whileHover={{ y: -5 }}
+    >
       <div className="relative overflow-hidden aspect-video">
         <motion.img
           src={image}
           alt={title}
-          className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+          className="w-full h-full object-cover object-center"
           loading="lazy"
-          whileHover={{ scale: 1.05 }}
           initial={{ opacity: 0.8, scale: 1.1 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
+          whileHover={{ scale: 1.05 }}
         />
         <motion.div 
-          className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"
           initial={{ opacity: 0 }}
           whileHover={{ opacity: 1 }}
+          transition={{ duration: 0.3 }}
         />
       </div>
       
@@ -118,6 +125,6 @@ export default function ProjectCard({
           )}
         </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 }

@@ -52,6 +52,7 @@ const Index = () => {
       animate="animate"
       exit="exit"
       variants={pageVariants}
+      className="relative z-10"
     >
       <motion.div variants={sectionVariants}>
         <HeroSection />
@@ -93,7 +94,7 @@ const Index = () => {
         <ContactSection />
       </motion.div>
       
-      {/* Temporarily hidden sections 
+      {/* Temporarily hidden sections - will be added later
       <motion.div 
         variants={sectionVariants}
         initial="initial"

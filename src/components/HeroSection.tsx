@@ -40,7 +40,7 @@ export default function HeroSection() {
     }
   };
   
-  // Fixed the repeatType to be a specific allowed value ("loop", "reverse", or "mirror") instead of a string
+  // Fixed the repeatType to be a specific allowed value
   const floatingVariants = {
     initial: {
       y: 0
@@ -50,7 +50,7 @@ export default function HeroSection() {
       transition: {
         duration: 3,
         repeat: Infinity,
-        repeatType: "loop", // Fixed: Now using a specific value instead of a generic string
+        repeatType: "loop", // Fixed: Using "loop" which is a valid value
         ease: "easeInOut"
       }
     }
