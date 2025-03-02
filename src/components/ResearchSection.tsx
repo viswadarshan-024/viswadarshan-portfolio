@@ -3,23 +3,23 @@ import { BookText, Link, Calendar, ArrowUpRight } from "lucide-react";
 import { Button } from "./ui/button";
 export default function ResearchSection() {
   const researches = [{
-    title: "Advances in Neural Network Architectures",
-    journal: "Journal of Artificial Intelligence Research",
-    date: "August 2023",
-    abstract: "This research explores novel neural network architectures designed for efficient processing of multimodal data with reduced computational requirements.",
-    link: "#"
+    title: "Enhancing Masked Word Prediction in Tamil Language Models: A Synergistic Aproach Using BERT and SBERT",
+    journal: "ICON Conference - ACL Anthology",
+    date: "December 2024",
+    abstract: "This research explores the challenges of masked word prediction and sentence-level semantic analysis in Tamil NLP, leveraging a synergistic combination of BERT and SBERT.",
+    link: "https://aclanthology.org/2024.icon-1.55/"
   }, {
-    title: "User Experience Patterns in Mobile Applications",
-    journal: "Human-Computer Interaction",
-    date: "March 2023",
-    abstract: "A comprehensive study analyzing emerging UX patterns in mobile applications and their impact on user engagement and retention.",
-    link: "#"
+    title: "Comparative Insights into Modern Architectures for Paraphrase Detection",
+    journal: "ICCIDS Conference - Springer IFIP AICT",
+    date: "February 2025",
+    abstract: "A comprehensive comparison of Transformer-based BERT models for paraphrase detection, demonstrating their strengths and trade-offs.",
+    link: "https://drive.google.com/file/d/174_vOMRxlA_HLvINV_2F8Z4IMC6YQG9u/view"
   }, {
-    title: "Sustainable Design Practices in Digital Products",
-    journal: "Journal of Sustainable Design",
-    date: "November 2022",
-    abstract: "This paper examines how implementing sustainable design practices can reduce digital carbon footprints while maintaining excellent user experiences.",
-    link: "#"
+    title: "Optimizing Tamil Tokenizers: The Limits of Pretrained Models",
+    journal: "National Level Research Conclave 2025",
+    date: "February 2025",
+    abstract: "This paper examines how implementing Tamil tokenizers from scratch for domain and task specific datasets.",
+    link: "https://drive.google.com/file/d/155vnpqCzjrLpc6k3jj07OS-ciIdBv6Mz/view"
   }];
   const containerVariants = {
     hidden: {
