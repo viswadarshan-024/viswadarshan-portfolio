@@ -40,7 +40,7 @@ export default function ProjectsSection() {
       title: "Personal Chatbot",
       description: "Personal Chatbot with Multi-Session Management seamlessly.",
       tags: ["Langchain", "Groq AI", "Streamlit"],
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475",
+      image: "https://images.unsplash.com/photo-1673179874596-1b27a1883dab",
       demoLink: "https://my-personalchatbot.streamlit.app/",
       githubLink: "https://github.com/viswadarshan-024/personal_chatbot",
       category: "AI Applications"
@@ -49,7 +49,7 @@ export default function ProjectsSection() {
       title: "Multilingual LLM Translator",
       description: "The application allows users to translate text into a variety of target languages effortlessly.",
       tags: ["Python", "Groq AI", "Langchain"],
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
+      image: "https://images.unsplash.com/photo-1526378800651-c32d170fe6f8",
       demoLink: "https://llm-translation-app.streamlit.app/",
       githubLink: "https://github.com/viswadarshan-024/llm-translation-app",
       category: "AI Applications"
@@ -58,7 +58,7 @@ export default function ProjectsSection() {
       title: "Image Recognition API",
       description: "An API that uses deep learning to recognize and classify objects in images.",
       tags: ["PyTorch", "FastAPI", "Computer Vision"],
-      image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7",
+      image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c",
       demoLink: "#",
       githubLink: "#",
       category: "AI Models"
@@ -67,7 +67,7 @@ export default function ProjectsSection() {
       title: "QR Code Payment App",
       description: "A bus commuting system designed to simplify fare payments and provide seamless travel experiences for passengers.",
       tags: ["Android Studio", "MySQL", "RazorPay Payment System"],
-      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3",
+      image: "https://images.unsplash.com/photo-1621155346337-1d19476ba7d6",
       demoLink: "https://drive.google.com/file/d/1QKM7-FQhRU4DKaTkcFBjIXYa8HIoSoq1/view",
       category: "Mobile Apps"
     },
@@ -75,7 +75,7 @@ export default function ProjectsSection() {
       title: "Taplyf App",
       description: "A comprehensive design of NFC Fair Payment Application by Taplyf.",
       tags: ["Figma", "UI/UX"],
-      image: "https://images.unsplash.com/photo-1561070791-2526d30994b5",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
       demoLink: "https://www.figma.com/proto/iO2Pc6HYz20uuE5SBNoHoo/Taplyf-Application-Prototype?node-id=0-1886&starting-point-node-id=0%3A1886&t=ypo3nS170aymxxYW-1",
       githubLink: "https://github.com/viswadarshan-024/Taplyf-App",
       category: "UI/UX Design"
@@ -84,7 +84,7 @@ export default function ProjectsSection() {
       title: "Magnus Webpage Design",
       description: "A comprehensive Web design for the Real time emotion Analyst Application.",
       tags: ["Figma", "UI/UX"],
-      image: "https://images.unsplash.com/photo-1561070791-2526d30994b5",
+      image: "https://images.unsplash.com/photo-1558655146-d09347e92766",
       demoLink: "https://www.figma.com/proto/dymWu6ONkz0WIigsubfYyi/Magnus-Web-Page?node-id=34-2&starting-point-node-id=34%3A2&scaling=scale-down-width&content-scaling=fixed",
       githubLink: "https://github.com/viswadarshan-024/Magnus-webdesign",
       category: "UI/UX Design"
@@ -93,7 +93,7 @@ export default function ProjectsSection() {
       title: "ANN Application",
       description: "Customer Churn Prediction App using Tensorflow and Python",
       tags: ["Python", "Tensorflow", "Streamlit"],
-      image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb",
+      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40",
       demoLink: "https://ann-predict-application.streamlit.app/",
       githubLink: "https://github.com/viswadarshan-024/DL-ANN-application",
       category: "AI Applications"
@@ -102,7 +102,7 @@ export default function ProjectsSection() {
       title: "SummariBot",
       description: "Document Summarization and Interactive Chatbot Application",
       tags: ["Python", "HF Inference", "Streamlit", "Groq AI"],
-      image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb",
+      image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
       demoLink: "https://ann-predict-application.streamlit.app/",
       githubLink: "https://github.com/viswadarshan-024/DL-ANN-application",
       category: "AI Applications"
@@ -111,7 +111,7 @@ export default function ProjectsSection() {
       title: "MentAI Learning Assistant",
       description: "An interactive application assist with learning Data Science and Full Stack Development.",
       tags: ["Python", "Groq AI", "Streamlit"],
-      image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb",
+      image: "https://images.unsplash.com/photo-1509062522246-3755977927d7",
       demoLink: "https://mentai-myapp.streamlit.app/",
       githubLink: "https://github.com/viswadarshan-024/MentAI",
       category: "AI Applications"
@@ -120,7 +120,7 @@ export default function ProjectsSection() {
       title: "RoBERT PD Model",
       description: "Robust Paraphrase Detection RoBERT Transformer Model",
       tags: ["HF Transformer", "Transfomer Architecture", "NLP"],
-      image: "https://images.unsplash.com/photo-1504639725590-34d0984388bd",
+      image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b",
       demoLink: "https://huggingface.co/viswadarshan06/pd-robert",
       githubLink: "https://github.com/viswadarshan-024/pd-robert",
       category: "AI Models"
@@ -129,7 +129,7 @@ export default function ProjectsSection() {
       title: "BERT PD Model",
       description: "Robust Paraphrase Detection BERT Transformer Model",
       tags: ["HF Transformer", "Transfomer Architecture", "NLP"],
-      image: "https://images.unsplash.com/photo-1504639725590-34d0984388bd",
+      image: "https://images.unsplash.com/photo-1599658880165-5f61397cb22d",
       demoLink: "https://huggingface.co/viswadarshan06/pd-bert",
       githubLink: "https://github.com/viswadarshan-024/pd-bert",
       category: "AI Models"
@@ -138,7 +138,7 @@ export default function ProjectsSection() {
       title: "MPNet PD Model",
       description: "Robust Paraphrase Detection MPNet Transformer Model",
       tags: ["HF Transformer", "Transfomer Architecture", "NLP"],
-      image: "https://images.unsplash.com/photo-1504639725590-34d0984388bd",
+      image: "https://images.unsplash.com/photo-1563986768609-322da13575f3",
       demoLink: "https://huggingface.co/viswadarshan06/pd-mpnet",
       githubLink: "https://github.com/viswadarshan-024/pd-mpnet",
       category: "AI Models"

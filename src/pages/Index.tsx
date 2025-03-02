@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import HeroSection from "@/components/HeroSection";
@@ -5,9 +6,9 @@ import AboutSection from "@/components/AboutSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import ContactSection from "@/components/ContactSection";
 import ResearchSection from "@/components/ResearchSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
-import BlogsSection from "@/components/BlogsSection";
-import CodeSnippetsSection from "@/components/CodeSnippetsSection";
+// import TestimonialsSection from "@/components/TestimonialsSection";
+// import BlogsSection from "@/components/BlogsSection";
+// import CodeSnippetsSection from "@/components/CodeSnippetsSection";
 
 const Index = () => {
   useEffect(() => {
@@ -91,6 +92,35 @@ const Index = () => {
       >
         <ContactSection />
       </motion.div>
+      
+      {/* Temporarily hidden sections 
+      <motion.div 
+        variants={sectionVariants}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <TestimonialsSection />
+      </motion.div>
+      
+      <motion.div 
+        variants={sectionVariants}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <BlogsSection />
+      </motion.div>
+      
+      <motion.div 
+        variants={sectionVariants}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <CodeSnippetsSection />
+      </motion.div>
+      */}
     </motion.div>
   );
 };

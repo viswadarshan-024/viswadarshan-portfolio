@@ -53,8 +53,8 @@ export default function ProjectCard({
               transition={{ duration: 0.3, delay: 0.1 + i * 0.05 }}
               whileHover={{ 
                 scale: 1.05, 
-                backgroundColor: "#0284c7", // Using a specific blue color instead of CSS var
-                color: "#ffffff" // Using white instead of CSS var
+                backgroundColor: "#0284c7", 
+                color: "#ffffff" 
               }}
             >
               {tag}

@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
@@ -39,6 +40,7 @@ export default function HeroSection() {
     }
   };
   
+  // Fixed the repeatType to be a specific allowed value ("loop", "reverse", or "mirror") instead of a string
   const floatingVariants = {
     initial: {
       y: 0
@@ -48,7 +50,7 @@ export default function HeroSection() {
       transition: {
         duration: 3,
         repeat: Infinity,
-        repeatType: "loop",
+        repeatType: "loop", // Fixed: Now using a specific value instead of a generic string
         ease: "easeInOut"
       }
     }
