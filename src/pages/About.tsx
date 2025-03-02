@@ -5,35 +5,41 @@ import { CheckCircle, Coffee, Code, User } from "lucide-react";
 const About = () => {
   const experiences = [
     {
-      company: "TechCorp Inc.",
-      position: "Senior Developer",
-      period: "2021 - Present",
-      description: "Leading the development of web applications and mentoring junior developers."
+      company: "HireBus",
+      position: "Product Development Intern",
+      period: "June 2024",
+      description: "Collaborated with Bus application UI/UX Design and App development"
     },
     {
-      company: "Design Studio",
-      position: "Frontend Developer",
-      period: "2018 - 2021",
-      description: "Collaborated with designers to implement responsive and accessible user interfaces."
+      company: "Gateway Software Solutions",
+      position: "ML/NLP Intern",
+      period: "December 2024",
+      description: "Collaborated with system design and Learning application development."
     },
     {
-      company: "Startup Hub",
-      position: "Junior Developer",
-      period: "2016 - 2018",
-      description: "Developed and maintained various client websites and applications."
+      company: "Joint Treasurer",
+      position: "CSBS Association, TCE",
+      period: "August 2024 - Present",
+      description: "I manage financial planning, budgeting, and event coordination for the CSBS Association, TCE"
+    },
+    {
+      company: "General Secretary",
+      position: "IEEE CIS Society, TCE",
+      period: "January 2025 - Present",
+      description: "I lead and oversee the activities, organizing events, managing the society's operations, and fostering a collaborative environment."
     }
   ];
 
   const education = [
     {
-      institution: "University of Technology",
-      degree: "Master of Computer Science",
-      period: "2014 - 2016"
+      institution: "Thiagarajar College of Engineering",
+      degree: "B.Tech Computer Science and Business Systems",
+      period: "2022 - 2026"
     },
     {
-      institution: "Digital Arts College",
-      degree: "Bachelor of Design",
-      period: "2010 - 2014"
+      institution: "Indian Institute of Technology, Ropar",
+      degree: "Minor in AI",
+      period: "2024 - 2025"
     }
   ];
 
@@ -189,9 +195,9 @@ const About = () => {
                 <div className="flex gap-4">
                   <CheckCircle className="w-5 h-5 text-gray-700 dark:text-gray-300 mt-0.5 flex-shrink-0" />
                   <div>
-                    <h3 className="font-medium mb-1">User-centered Design</h3>
+                    <h3 className="font-medium mb-1">Problem-Solving Mindset</h3>
                     <p className="text-gray-600 dark:text-gray-400 text-sm">
-                      I prioritize understanding user needs and designing solutions that address them effectively.
+                      I thrive on tackling complex AI challenges, from low-resource language processing to LLM fine-tuning, always seeking the most effective and impactful solutions.
                     </p>
                   </div>
                 </div>
@@ -199,9 +205,9 @@ const About = () => {
                 <div className="flex gap-4">
                   <CheckCircle className="w-5 h-5 text-gray-700 dark:text-gray-300 mt-0.5 flex-shrink-0" />
                   <div>
-                    <h3 className="font-medium mb-1">Continuous Improvement</h3>
+                    <h3 className="font-medium mb-1">Real-World Impact</h3>
                     <p className="text-gray-600 dark:text-gray-400 text-sm">
-                      I believe in iterative development, constantly learning and refining my work based on feedback and new insights.
+                      I focus on building AI applications that matter, AI systems that bridge the gap between research and real-world needs.
                     </p>
                   </div>
                 </div>
@@ -209,9 +215,9 @@ const About = () => {
                 <div className="flex gap-4">
                   <CheckCircle className="w-5 h-5 text-gray-700 dark:text-gray-300 mt-0.5 flex-shrink-0" />
                   <div>
-                    <h3 className="font-medium mb-1">Quality over Quantity</h3>
+                    <h3 className="font-medium mb-1">Research-Driven Innovation</h3>
                     <p className="text-gray-600 dark:text-gray-400 text-sm">
-                      I focus on delivering high-quality work that stands the test of time, rather than quick, temporary solutions.
+                      I combine cutting-edge AI research with practical implementation, ensuring that every project is backed by deep technical understanding and the latest advancements.
                     </p>
                   </div>
                 </div>
@@ -219,9 +225,9 @@ const About = () => {
                 <div className="flex gap-4">
                   <CheckCircle className="w-5 h-5 text-gray-700 dark:text-gray-300 mt-0.5 flex-shrink-0" />
                   <div>
-                    <h3 className="font-medium mb-1">Collaborative Process</h3>
+                    <h3 className="font-medium mb-1">Efficiency & Precision</h3>
                     <p className="text-gray-600 dark:text-gray-400 text-sm">
-                      I value open communication and collaboration, working closely with clients and team members to achieve the best results.
+                      I work with high speed and accuracy, optimizing models, refining workflows, and delivering scalable, high-performance AI solutions.
                     </p>
                   </div>
                 </div>
