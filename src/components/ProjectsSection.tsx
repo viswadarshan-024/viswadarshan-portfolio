@@ -88,7 +88,7 @@ export default function ProjectsSection() {
       demoLink: "https://www.figma.com/proto/dymWu6ONkz0WIigsubfYyi/Magnus-Web-Page?node-id=34-2&starting-point-node-id=34%3A2&scaling=scale-down-width&content-scaling=fixed",
       githubLink: "https://github.com/viswadarshan-024/Magnus-webdesign",
       category: "UI/UX Design"
-    }
+    },
     {
       title: "ANN Application",
       description: "Customer Churn Prediction App using Tensorflow and Python",
