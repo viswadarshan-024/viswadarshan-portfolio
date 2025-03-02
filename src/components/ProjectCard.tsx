@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { ArrowUpRight, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -52,8 +53,8 @@ export default function ProjectCard({
               transition={{ duration: 0.3, delay: 0.1 + i * 0.05 }}
               whileHover={{ 
                 scale: 1.05, 
-                backgroundColor: "var(--primary-color)",
-                color: "var(--primary-foreground-color)" 
+                backgroundColor: "#0284c7", // Using a specific blue color instead of CSS var
+                color: "#ffffff" // Using white instead of CSS var
               }}
             >
               {tag}

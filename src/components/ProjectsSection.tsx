@@ -14,7 +14,7 @@ export default function ProjectsSection() {
       title: "AI Search Assistant",
       description: "An AI-powered search assistant that performs Google searches and delivers relevant results with intelligent responses.",
       tags: ["Streamlit", "Groq AI", "Google Search Engine"],
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
       demoLink: "https://ai-search-assistant.streamlit.app/",
       githubLink: "https://github.com/viswadarshan-024/Search-AI",
       category: "AI Applications"
@@ -40,7 +40,7 @@ export default function ProjectsSection() {
       title: "Personal Chatbot",
       description: "Personal Chatbot with Multi-Session Management seamlessly.",
       tags: ["Langchain", "Groq AI", "Streamlit"],
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475",
       demoLink: "https://my-personalchatbot.streamlit.app/",
       githubLink: "https://github.com/viswadarshan-024/personal_chatbot",
       category: "AI Applications"
@@ -49,7 +49,7 @@ export default function ProjectsSection() {
       title: "Multilingual LLM Translator",
       description: "The application allows users to translate text into a variety of target languages effortlessly.",
       tags: ["Python", "Groq AI", "Langchain"],
-      image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb",
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
       demoLink: "https://llm-translation-app.streamlit.app/",
       githubLink: "https://github.com/viswadarshan-024/llm-translation-app",
       category: "AI Applications"
@@ -58,7 +58,7 @@ export default function ProjectsSection() {
       title: "Image Recognition API",
       description: "An API that uses deep learning to recognize and classify objects in images.",
       tags: ["PyTorch", "FastAPI", "Computer Vision"],
-      image: "https://images.unsplash.com/photo-1504639725590-34d0984388bd",
+      image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7",
       demoLink: "#",
       githubLink: "#",
       category: "AI Models"

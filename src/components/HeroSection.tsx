@@ -3,11 +3,14 @@ import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Github, Linkedin, FileText, Code, Bot, MessageSquare, BookOpen } from "lucide-react";
+
 export default function HeroSection() {
   const [isLoaded, setIsLoaded] = useState(false);
+  
   useEffect(() => {
     setIsLoaded(true);
   }, []);
+  
   const containerVariants = {
     hidden: {
       opacity: 0
@@ -20,6 +23,7 @@ export default function HeroSection() {
       }
     }
   };
+  
   const itemVariants = {
     hidden: {
       opacity: 0,
@@ -34,6 +38,7 @@ export default function HeroSection() {
       }
     }
   };
+  
   const floatingVariants = {
     initial: {
       y: 0
@@ -48,6 +53,7 @@ export default function HeroSection() {
       }
     }
   };
+  
   const scrollToNext = () => {
     const nextSection = document.getElementById("about-section");
     if (nextSection) {
@@ -57,6 +63,7 @@ export default function HeroSection() {
       });
     }
   };
+  
   return <section className="relative min-h-screen flex items-center justify-center py-20 overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="mask-radial-faded absolute inset-0 bg-grid-small-black/[0.03] dark:bg-grid-small-white/[0.03]" />
