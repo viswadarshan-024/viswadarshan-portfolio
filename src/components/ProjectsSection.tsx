@@ -6,53 +6,53 @@ import { Button } from "./ui/button";
 
 export default function ProjectsSection() {
   // Added categories
-  const categories = ["All", "Web Design", "Mobile Apps", "AI Models", "UI/UX"];
+  const categories = ["All", "AI Applications", "Mobile Apps", "AI Models", "UI/UX Design"];
   const [activeCategory, setActiveCategory] = useState("All");
   
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A modern e-commerce solution with seamless checkout and inventory management.",
-      tags: ["React", "Node.js", "MongoDB", "Stripe"],
+      title: "AI Search Assistant",
+      description: "An AI-powered search assistant that performs Google searches and delivers relevant results with intelligent responses.",
+      tags: ["Streamlit", "Groq AI", "Google Search Engine"],
       image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
-      demoLink: "#",
-      githubLink: "#",
-      category: "Web Design"
+      demoLink: "https://ai-search-assistant.streamlit.app/",
+      githubLink: "https://github.com/viswadarshan-024/Search-AI",
+      category: "AI Applications"
     },
     {
       title: "Portfolio Website",
-      description: "A minimalist portfolio for a photographer showcasing their work with elegant animations.",
-      tags: ["Next.js", "Tailwind CSS", "Framer Motion"],
+      description: "A minimalist portfolio for a AI Developer showcasing their work with elegant animations.",
+      tags: ["Next.js", "Tailwind CSS", "Framer Motion", "Typescript"],
       image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
       demoLink: "#",
-      githubLink: "#",
-      category: "Web Design"
+      githubLink: "https://github.com/viswadarshan-024/innovative-portfolio-spark",
+      category: "UI/UX Design"
     },
     {
-      title: "Health & Fitness App",
-      description: "A comprehensive fitness tracking application with personalized workout plans.",
-      tags: ["React Native", "Firebase", "Redux"],
+      title: "Image Sim AI",
+      description: "This application measures the similarity between two images using various computer vision techniques.",
+      tags: ["OpenCV", "Streamlit", "SciPy"],
       image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
-      demoLink: "#",
-      category: "Mobile Apps"
-    },
-    {
-      title: "Real Estate Platform",
-      description: "A platform connecting property buyers, sellers, and agents with advanced filtering.",
-      tags: ["Vue.js", "Express", "PostgreSQL"],
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
-      demoLink: "#",
-      githubLink: "#",
-      category: "Web Design"
-    },
-    {
-      title: "Sentiment Analysis Model",
-      description: "A machine learning model that analyzes customer feedback and categorizes sentiment.",
-      tags: ["Python", "TensorFlow", "NLP"],
-      image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb",
-      demoLink: "#",
-      githubLink: "#",
+      demoLink: "https://simageai.streamlit.app/",
       category: "AI Models"
+    },
+    {
+      title: "Personal Chatbot",
+      description: "Personal Chatbot with Multi-Session Management seamlessly.",
+      tags: ["Langchain", "Groq AI", "Streamlit"],
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
+      demoLink: "https://my-personalchatbot.streamlit.app/",
+      githubLink: "https://github.com/viswadarshan-024/personal_chatbot",
+      category: "AI Applications"
+    },
+    {
+      title: "Multilingual LLM Translator",
+      description: "The application allows users to translate text into a variety of target languages effortlessly.",
+      tags: ["Python", "Groq AI", "Langchain"],
+      image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb",
+      demoLink: "https://llm-translation-app.streamlit.app/",
+      githubLink: "https://github.com/viswadarshan-024/llm-translation-app",
+      category: "AI Applications"
     },
     {
       title: "Image Recognition API",
@@ -64,21 +64,84 @@ export default function ProjectsSection() {
       category: "AI Models"
     },
     {
-      title: "Mobile Banking App",
-      description: "A secure and intuitive mobile banking application with real-time transaction tracking.",
-      tags: ["Flutter", "Firebase", "Biometrics"],
+      title: "QR Code Payment App",
+      description: "A bus commuting system designed to simplify fare payments and provide seamless travel experiences for passengers.",
+      tags: ["Android Studio", "MySQL", "RazorPay Payment System"],
       image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3",
-      demoLink: "#",
+      demoLink: "https://drive.google.com/file/d/1QKM7-FQhRU4DKaTkcFBjIXYa8HIoSoq1/view",
       category: "Mobile Apps"
     },
     {
-      title: "Design System",
-      description: "A comprehensive design system with reusable components for consistent UX across products.",
-      tags: ["Figma", "Storybook", "CSS Architecture"],
+      title: "Taplyf App",
+      description: "A comprehensive design of NFC Fair Payment Application by Taplyf.",
+      tags: ["Figma", "UI/UX"],
       image: "https://images.unsplash.com/photo-1561070791-2526d30994b5",
-      demoLink: "#",
-      githubLink: "#",
-      category: "UI/UX"
+      demoLink: "https://www.figma.com/proto/iO2Pc6HYz20uuE5SBNoHoo/Taplyf-Application-Prototype?node-id=0-1886&starting-point-node-id=0%3A1886&t=ypo3nS170aymxxYW-1",
+      githubLink: "https://github.com/viswadarshan-024/Taplyf-App",
+      category: "UI/UX Design"
+    },
+    {
+      title: "Magnus Webpage Design",
+      description: "A comprehensive Web design for the Real time emotion Analyst Application.",
+      tags: ["Figma", "UI/UX"],
+      image: "https://images.unsplash.com/photo-1561070791-2526d30994b5",
+      demoLink: "https://www.figma.com/proto/dymWu6ONkz0WIigsubfYyi/Magnus-Web-Page?node-id=34-2&starting-point-node-id=34%3A2&scaling=scale-down-width&content-scaling=fixed",
+      githubLink: "https://github.com/viswadarshan-024/Magnus-webdesign",
+      category: "UI/UX Design"
+    }
+    {
+      title: "ANN Application",
+      description: "Customer Churn Prediction App using Tensorflow and Python",
+      tags: ["Python", "Tensorflow", "Streamlit"],
+      image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb",
+      demoLink: "https://ann-predict-application.streamlit.app/",
+      githubLink: "https://github.com/viswadarshan-024/DL-ANN-application",
+      category: "AI Applications"
+    },
+    {
+      title: "SummariBot",
+      description: "Document Summarization and Interactive Chatbot Application",
+      tags: ["Python", "HF Inference", "Streamlit", "Groq AI"],
+      image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb",
+      demoLink: "https://ann-predict-application.streamlit.app/",
+      githubLink: "https://github.com/viswadarshan-024/DL-ANN-application",
+      category: "AI Applications"
+    },
+    {
+      title: "MentAI Learning Assistant",
+      description: "An interactive application assist with learning Data Science and Full Stack Development.",
+      tags: ["Python", "Groq AI", "Streamlit"],
+      image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb",
+      demoLink: "https://mentai-myapp.streamlit.app/",
+      githubLink: "https://github.com/viswadarshan-024/MentAI",
+      category: "AI Applications"
+    },
+    {
+      title: "RoBERT PD Model",
+      description: "Robust Paraphrase Detection RoBERT Transformer Model",
+      tags: ["HF Transformer", "Transfomer Architecture", "NLP"],
+      image: "https://images.unsplash.com/photo-1504639725590-34d0984388bd",
+      demoLink: "https://huggingface.co/viswadarshan06/pd-robert",
+      githubLink: "https://github.com/viswadarshan-024/pd-robert",
+      category: "AI Models"
+    },
+    {
+      title: "BERT PD Model",
+      description: "Robust Paraphrase Detection BERT Transformer Model",
+      tags: ["HF Transformer", "Transfomer Architecture", "NLP"],
+      image: "https://images.unsplash.com/photo-1504639725590-34d0984388bd",
+      demoLink: "https://huggingface.co/viswadarshan06/pd-bert",
+      githubLink: "https://github.com/viswadarshan-024/pd-bert",
+      category: "AI Models"
+    },
+    {
+      title: "MPNet PD Model",
+      description: "Robust Paraphrase Detection MPNet Transformer Model",
+      tags: ["HF Transformer", "Transfomer Architecture", "NLP"],
+      image: "https://images.unsplash.com/photo-1504639725590-34d0984388bd",
+      demoLink: "https://huggingface.co/viswadarshan06/pd-mpnet",
+      githubLink: "https://github.com/viswadarshan-024/pd-mpnet",
+      category: "AI Models"
     }
   ];
 
