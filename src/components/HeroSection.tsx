@@ -108,11 +108,11 @@ export default function HeroSection() {
         <motion.h1 variants={itemVariants} className="text-4xl md:text-5xl lg:text-7xl font-display font-bold tracking-tight mb-6">
           <motion.span className="block" whileHover={{
           scale: 1.01
-        }}>Crafting digital</motion.span>
+        }}>Building Intelligent AI</motion.span>
           <motion.span className="block mt-2" whileHover={{
           scale: 1.01
         }}>
-            <span className="text-gray-800 dark:text-gray-200">experiences with</span>{" "}
+            <span className="text-gray-800 dark:text-gray-200">Solutions with</span>{" "}
             <motion.span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 dark:from-gray-100 dark:to-gray-400" animate={{
             backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
           }} transition={{
@@ -120,7 +120,7 @@ export default function HeroSection() {
             repeat: Infinity,
             repeatType: "mirror"
           }}>
-              precision
+              Innovation & Precision
             </motion.span>
           </motion.span>
         </motion.h1>
