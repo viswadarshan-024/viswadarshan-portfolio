@@ -77,7 +77,7 @@ const About = () => {
               <div className="w-full md:w-1/3">
                 <div className="aspect-square relative rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-xl">
                   <img 
-                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
+                    src="public/one.png" 
                     alt="Profile" 
                     className="object-cover w-full h-full"
                   />
