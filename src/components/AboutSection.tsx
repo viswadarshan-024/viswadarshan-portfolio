@@ -1,7 +1,10 @@
+
 import { motion } from "framer-motion";
 import { Award, BookOpen, Briefcase, Cpu, Heart, Target } from "lucide-react";
+
 export default function AboutSection() {
   const skills = ["Python", "Natural Language Processing", "Generative AI", "Deep Learning", "Machine Learning", "Android Studio", "Java", "Team Leadership"];
+  
   const fadeInUpVariants = {
     hidden: {
       opacity: 0,
@@ -16,6 +19,7 @@ export default function AboutSection() {
       }
     }
   };
+  
   const listItemVariants = {
     hidden: {
       opacity: 0,
@@ -30,6 +34,7 @@ export default function AboutSection() {
       }
     })
   };
+  
   return <section id="about-section" className="py-20 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col md:flex-row gap-12 items-center">
@@ -50,11 +55,18 @@ export default function AboutSection() {
               <motion.div className="absolute inset-0 rounded-xl bg-gradient-to-tr from-black/5 to-black/30 dark:from-white/5 dark:to-white/10" whileHover={{
               opacity: 0.7
             }} />
-              <motion.img src="public/me.jpg" alt="Portrait image" className="rounded-xl shadow-xl w-full aspect-[4/5] object-cover" loading="lazy" whileHover={{
-              scale: 1.03
-            }} transition={{
-              duration: 0.3
-            }} />
+              <motion.img 
+                src="/lovable-uploads/9321a1dc-07d1-44c7-8d96-ea2da32111cf.png" 
+                alt="Portrait image" 
+                className="rounded-xl shadow-xl w-full aspect-[4/5] object-cover" 
+                loading="eager" 
+                whileHover={{
+                  scale: 1.03
+                }} 
+                transition={{
+                  duration: 0.3
+                }} 
+              />
             </div>
           </motion.div>
 
@@ -135,10 +147,6 @@ export default function AboutSection() {
                   <p className="text-sm text-gray-500 dark:text-gray-400">TCE, Madurai</p>
                 </div>
               </motion.div>
-              
-              
-              
-              
               
               <motion.div className="flex items-center gap-3" whileHover={{
               x: 5
