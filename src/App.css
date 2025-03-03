@@ -104,16 +104,17 @@
   animation-delay: -10s;
 }
 
+/* Light theme blob colors - improved visibility */
 .light .blob-1 {
-  background: radial-gradient(circle at center, rgba(100, 100, 255, 0.2), rgba(100, 100, 255, 0.05));
+  background: radial-gradient(circle at center, rgba(100, 100, 255, 0.3), rgba(100, 100, 255, 0.1));
 }
 
 .light .blob-2 {
-  background: radial-gradient(circle at center, rgba(100, 220, 150, 0.2), rgba(100, 220, 150, 0.05));
+  background: radial-gradient(circle at center, rgba(100, 220, 150, 0.3), rgba(100, 220, 150, 0.1));
 }
 
 .light .blob-3 {
-  background: radial-gradient(circle at center, rgba(255, 100, 150, 0.2), rgba(255, 100, 150, 0.05));
+  background: radial-gradient(circle at center, rgba(255, 100, 150, 0.3), rgba(255, 100, 150, 0.1));
 }
 
 /* Improved grid backgrounds */
@@ -193,6 +194,27 @@ html {
   background: rgba(0, 0, 0, 0.25);
 }
 
+/* Enhanced light theme styles */
+.light .text-gray-500 {
+  color: #5A5A5A;
+}
+
+.light .text-gray-400 {
+  color: #6B6B6B;
+}
+
+.light .bg-gray-950 {
+  background-color: #ffffff;
+}
+
+.light .border-gray-800 {
+  border-color: #e5e7eb;
+}
+
+.light .border-gray-200 {
+  border-color: #f3f4f6;
+}
+
 /* Pulse animation for activity indicators */
 @media (prefers-reduced-motion: no-preference) {
   .animate-pulse {
@@ -231,7 +253,24 @@ html {
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
-/* Better image rendering */
+/* Better image rendering and loading */
 img {
   image-rendering: auto;
+  transition: opacity 0.3s ease;
+}
+
+/* Preload animation for images */
+img.loading {
+  opacity: 0;
+}
+
+img.loaded {
+  opacity: 1;
+}
+
+/* Responsive adjustments for light theme */
+@media (max-width: 768px) {
+  .light .container {
+    padding: 1rem;
+  }
 }

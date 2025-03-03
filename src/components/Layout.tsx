@@ -11,15 +11,15 @@ export default function Layout() {
   const [isLoaded, setIsLoaded] = useState(false);
   
   // Using spring animation for smooth cursor movement with better performance settings
-  const springX = useSpring(0, { damping: 30, stiffness: 250, mass: 0.3 });
-  const springY = useSpring(0, { damping: 30, stiffness: 250, mass: 0.3 });
+  const springX = useSpring(0, { damping: 20, stiffness: 200, mass: 0.2 });
+  const springY = useSpring(0, { damping: 20, stiffness: 200, mass: 0.2 });
 
   useEffect(() => {
     setIsLoaded(true);
     
     // Throttle mouse movement for better performance
     let lastRenderTime = 0;
-    const throttleMs = 10; // Lower value for smoother animation, higher for better performance
+    const throttleMs = 10; // Lower value for smoother animation
     
     const handleMouseMove = (e: MouseEvent) => {
       const currentTime = Date.now();
@@ -57,8 +57,8 @@ export default function Layout() {
       setSpotlightPosition(prev => ({ ...prev, y }));
     });
 
-    window.addEventListener("mousemove", handleMouseMove);
-    window.addEventListener("touchmove", handleTouchMove);
+    window.addEventListener("mousemove", handleMouseMove, { passive: true });
+    window.addEventListener("touchmove", handleTouchMove, { passive: true });
 
     // Create and animate background particles
     const createParticles = () => {
@@ -68,13 +68,13 @@ export default function Layout() {
       // Clear existing particles
       particleContainer.innerHTML = '';
       
-      // Create new particles
-      for (let i = 0; i < 15; i++) {  // Reduced number of particles for better performance
+      // Create new particles - reduced for better performance
+      for (let i = 0; i < 10; i++) {
         const particle = document.createElement('div');
         particle.className = 'particle';
         
         // Random properties
-        const size = Math.random() * 3 + 2; // Smaller particles for better performance
+        const size = Math.random() * 3 + 2;
         const posX = Math.random() * 100;
         const posY = Math.random() * 100;
         const opacity = Math.random() * 0.3 + 0.1;
@@ -93,7 +93,30 @@ export default function Layout() {
       }
     };
     
+    // Preload images for a better experience
+    const preloadImages = () => {
+      const images = document.querySelectorAll('img');
+      
+      images.forEach(img => {
+        // Add loading class
+        img.classList.add('loading');
+        
+        // When image is loaded, add loaded class
+        img.onload = () => {
+          img.classList.remove('loading');
+          img.classList.add('loaded');
+        };
+        
+        // If image is already loaded, add loaded class directly
+        if (img.complete) {
+          img.classList.remove('loading');
+          img.classList.add('loaded');
+        }
+      });
+    };
+    
     createParticles();
+    preloadImages();
     
     // Throttle resize event for better performance
     let resizeTimeout: number;
@@ -102,7 +125,7 @@ export default function Layout() {
       resizeTimeout = window.setTimeout(createParticles, 100);
     };
     
-    window.addEventListener('resize', handleResize);
+    window.addEventListener('resize', handleResize, { passive: true });
 
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
@@ -118,11 +141,11 @@ export default function Layout() {
     initial: { opacity: 0 },
     animate: { 
       opacity: 1,
-      transition: { duration: 0.5 }
+      transition: { duration: 0.4 }
     },
     exit: { 
       opacity: 0,
-      transition: { duration: 0.3 }
+      transition: { duration: 0.2 }
     }
   };
 

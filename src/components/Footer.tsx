@@ -12,7 +12,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Logo and tagline */}
           <div className="space-y-3">
-            <Link to="/" className="font-display font-semibold text-lg">
+            <Link to="/" className="font-display font-semibold text-lg inline-block">
               Portfolio
             </Link>
             <p className="text-sm text-gray-500 dark:text-gray-400">
@@ -23,103 +23,75 @@ export default function Footer() {
           {/* Quick links */}
           <div className="space-y-3">
             <h3 className="font-medium text-sm">Quick Links</h3>
-            <div className="flex flex-col space-y-2">
-              <Button 
-                variant="link" 
-                className="justify-start h-auto p-0 text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100"
-                asChild
+            <nav className="flex flex-col space-y-2">
+              <Link 
+                to="/" 
+                className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
               >
-                <Link to="/">Home</Link>
-              </Button>
-              <Button 
-                variant="link" 
-                className="justify-start h-auto p-0 text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100"
-                asChild
+                Home
+              </Link>
+              <Link 
+                to="/about" 
+                className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
               >
-                <Link to="/about">About</Link>
-              </Button>
-              <Button 
-                variant="link" 
-                className="justify-start h-auto p-0 text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100"
-                asChild
+                About
+              </Link>
+              <Link 
+                to="/projects" 
+                className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
               >
-                <Link to="/projects">Projects</Link>
-              </Button>
-              <Button 
-                variant="link" 
-                className="justify-start h-auto p-0 text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100"
-                asChild
+                Projects
+              </Link>
+              <Link 
+                to="/contact" 
+                className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
               >
-                <Link to="/contact">Contact</Link>
-              </Button>
-            </div>
+                Contact
+              </Link>
+            </nav>
           </div>
 
           {/* Social links */}
           <div className="space-y-3">
             <h3 className="font-medium text-sm">Connect</h3>
             <div className="flex space-x-4">
-              <Button 
-                variant="ghost" 
-                size="icon" 
-                className="h-8 w-8 rounded-full text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
-                asChild
+              <a 
+                href="https://github.com/viswadarshan-024" 
+                target="_blank" 
+                rel="noreferrer" 
+                aria-label="GitHub"
+                className="rounded-full p-2 text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
               >
-                <a 
-                  href="https://github.com/viswadarshan-024" 
-                  target="_blank" 
-                  rel="noreferrer" 
-                  aria-label="GitHub"
-                >
-                  <Github size={18} />
-                </a>
-              </Button>
+                <Github size={18} />
+              </a>
               
-              <Button 
-                variant="ghost" 
-                size="icon" 
-                className="h-8 w-8 rounded-full text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
-                asChild
+              <a 
+                href="https://www.linkedin.com/in/viswadarshan-r-r-68b8b124b/" 
+                target="_blank" 
+                rel="noreferrer" 
+                aria-label="LinkedIn"
+                className="rounded-full p-2 text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
               >
-                <a 
-                  href="https://www.linkedin.com/in/viswadarshan-r-r-68b8b124b/" 
-                  target="_blank" 
-                  rel="noreferrer" 
-                  aria-label="LinkedIn"
-                >
-                  <Linkedin size={18} />
-                </a>
-              </Button>
+                <Linkedin size={18} />
+              </a>
               
-              <Button 
-                variant="ghost" 
-                size="icon" 
-                className="h-8 w-8 rounded-full text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
-                asChild
+              <a 
+                href="https://twitter.com" 
+                target="_blank" 
+                rel="noreferrer" 
+                aria-label="Twitter"
+                className="rounded-full p-2 text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
               >
-                <a 
-                  href="https://twitter.com" 
-                  target="_blank" 
-                  rel="noreferrer" 
-                  aria-label="Twitter"
-                >
-                  <Twitter size={18} />
-                </a>
-              </Button>
+                <Twitter size={18} />
+              </a>
               
-              <Button 
-                variant="ghost" 
-                size="icon" 
-                className="h-8 w-8 rounded-full text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
-                asChild
+              <a 
+                href="mailto:viswadarshanrramiya@gmail.com" 
+                aria-label="Email"
+                className="rounded-full p-2 text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
               >
-                <a 
-                  href="mailto:viswadarshanrramiya@gmail.com" 
-                  aria-label="Email"
-                >
-                  <Mail size={18} />
-                </a>
-              </Button>
+                <Mail size={18} />
+              </a>
             </div>
           </div>
         </div>
