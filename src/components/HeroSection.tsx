@@ -1,9 +1,8 @@
-
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Github, Linkedin, FileText, Code, Bot, MessageSquare, BookOpen } from "lucide-react";
+import { ArrowRight, Github, Linkedin, FileText, Code, Bot, MessageSquare } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function HeroSection() {
@@ -41,7 +40,6 @@ export default function HeroSection() {
     }
   };
   
-  // Fixed the animation to use proper types
   const floatingVariants = {
     initial: {
       y: 0
@@ -51,7 +49,7 @@ export default function HeroSection() {
       transition: {
         duration: 3,
         repeat: Infinity,
-        repeatType: "loop" as const, // Fixed: Using type assertion to match expected types
+        repeatType: "loop",
         ease: "easeInOut"
       }
     }
@@ -60,10 +58,7 @@ export default function HeroSection() {
   const scrollToNext = () => {
     const nextSection = document.getElementById("about-section");
     if (nextSection) {
-      window.scrollTo({
-        top: nextSection.offsetTop - 80,
-        behavior: "smooth"
-      });
+      nextSection.scrollIntoView({ behavior: "smooth" });
     }
   };
   
@@ -138,8 +133,8 @@ export default function HeroSection() {
           stiffness: 400,
           damping: 10
         }}>
-            <Button size="lg" className="rounded-full px-6" asChild>
-              <Link to="/projects">
+            <Button size="lg" className="rounded-full px-6">
+              <Link to="/projects" className="flex items-center">
                 View Projects <ArrowRight className="ml-1" />
               </Link>
             </Button>
@@ -154,8 +149,8 @@ export default function HeroSection() {
           stiffness: 400,
           damping: 10
         }}>
-            <Button variant="outline" size="lg" className="rounded-full px-6" asChild>
-              <Link to="/contact">
+            <Button variant="outline" size="lg" className="rounded-full px-6">
+              <Link to="/contact" className="flex items-center">
                 Get in Touch
               </Link>
             </Button>
@@ -163,8 +158,7 @@ export default function HeroSection() {
         </motion.div>
 
         <div className="mt-8 flex flex-wrap justify-center items-center gap-4">
-          <motion.a href="https://drive.google.com/file/d/1O0GJnvqjsQZdxP48Xy9gA7ojm4EXIJYw/view" // Replace with actual resume link
-        target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" whileHover={{
+          <motion.a href="https://drive.google.com/file/d/1O0GJnvqjsQZdxP48Xy9gA7ojm4EXIJYw/view" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" whileHover={{
           scale: 1.05
         }} whileTap={{
           scale: 0.95
@@ -182,8 +176,7 @@ export default function HeroSection() {
             <span>Resume</span>
           </motion.a>
           
-          <motion.a href="https://www.linkedin.com/in/viswadarshan-r-r-68b8b124b/" // Replace with actual LinkedIn link
-        target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" whileHover={{
+          <motion.a href="https://www.linkedin.com/in/viswadarshan-r-r-68b8b124b/" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" whileHover={{
           scale: 1.05
         }} whileTap={{
           scale: 0.95
@@ -201,8 +194,7 @@ export default function HeroSection() {
             <span>LinkedIn</span>
           </motion.a>
           
-          <motion.a href="https://github.com/viswadarshan-024" // Replace with actual GitHub link
-        target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" whileHover={{
+          <motion.a href="https://github.com/viswadarshan-024" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" whileHover={{
           scale: 1.05
         }} whileTap={{
           scale: 0.95
@@ -220,8 +212,7 @@ export default function HeroSection() {
             <span>GitHub</span>
           </motion.a>
           
-          <motion.a href="https://huggingface.co/viswadarshan06" // Replace with actual HuggingFace link
-        target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" whileHover={{
+          <motion.a href="https://huggingface.co/viswadarshan06" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" whileHover={{
           scale: 1.05
         }} whileTap={{
           scale: 0.95
@@ -239,8 +230,7 @@ export default function HeroSection() {
             <span>HuggingFace</span>
           </motion.a>
           
-          <motion.a href="https://www.kaggle.com/viswadarshanrr" // Replace with actual Kaggle link
-        target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" whileHover={{
+          <motion.a href="https://www.kaggle.com/viswadarshanrr" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" whileHover={{
           scale: 1.05
         }} whileTap={{
           scale: 0.95
@@ -258,8 +248,7 @@ export default function HeroSection() {
             <span>Kaggle</span>
           </motion.a>
           
-          <motion.a href="https://wa.me/6380403325" // Replace with actual WhatsApp link
-        target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" whileHover={{
+          <motion.a href="https://wa.me/6380403325" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" whileHover={{
           scale: 1.05
         }} whileTap={{
           scale: 0.95

@@ -1,29 +1,47 @@
 
 import { Outlet } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, useSpring, AnimatePresence } from "framer-motion";
 
 export default function Layout() {
   const [spotlightPosition, setSpotlightPosition] = useState({ x: 0, y: 0 });
   const [showSpotlight, setShowSpotlight] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
+  
+  // Using spring animation for smooth cursor movement
+  const springX = useSpring(0, { damping: 25, stiffness: 200, mass: 0.5 });
+  const springY = useSpring(0, { damping: 25, stiffness: 200, mass: 0.5 });
 
   useEffect(() => {
     setIsLoaded(true);
     
     const handleMouseMove = (e: MouseEvent) => {
-      setSpotlightPosition({ x: e.clientX, y: e.clientY });
+      // Set springs for smooth movement
+      springX.set(e.clientX);
+      springY.set(e.clientY);
+      
       if (!showSpotlight) setShowSpotlight(true);
     };
 
     const handleTouchMove = (e: TouchEvent) => {
       if (e.touches.length > 0) {
-        setSpotlightPosition({ x: e.touches[0].clientX, y: e.touches[0].clientY });
+        springX.set(e.touches[0].clientX);
+        springY.set(e.touches[0].clientY);
+        
         if (!showSpotlight) setShowSpotlight(true);
       }
     };
+    
+    // Subscribe to spring updates
+    const unsubscribeX = springX.onChange(x => {
+      setSpotlightPosition(prev => ({ ...prev, x }));
+    });
+    
+    const unsubscribeY = springY.onChange(y => {
+      setSpotlightPosition(prev => ({ ...prev, y }));
+    });
 
     window.addEventListener("mousemove", handleMouseMove);
     window.addEventListener("touchmove", handleTouchMove);
@@ -37,15 +55,15 @@ export default function Layout() {
       particleContainer.innerHTML = '';
       
       // Create new particles
-      for (let i = 0; i < 30; i++) {
+      for (let i = 0; i < 20; i++) {  // Reduced number of particles for better performance
         const particle = document.createElement('div');
         particle.className = 'particle';
         
         // Random properties
-        const size = Math.random() * 5 + 2;
+        const size = Math.random() * 4 + 2; // Smaller particles for better performance
         const posX = Math.random() * 100;
         const posY = Math.random() * 100;
-        const opacity = Math.random() * 0.5 + 0.1;
+        const opacity = Math.random() * 0.4 + 0.1;
         const animDuration = Math.random() * 20 + 10;
         const animDelay = Math.random() * 5;
         
@@ -63,15 +81,24 @@ export default function Layout() {
     
     createParticles();
     
-    // Recreate particles on window resize for better distribution
-    window.addEventListener('resize', createParticles);
+    // Throttle resize event for better performance
+    let resizeTimeout: number;
+    const handleResize = () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = window.setTimeout(createParticles, 100);
+    };
+    
+    window.addEventListener('resize', handleResize);
 
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
       window.removeEventListener("touchmove", handleTouchMove);
-      window.removeEventListener('resize', createParticles);
+      window.removeEventListener('resize', handleResize);
+      unsubscribeX();
+      unsubscribeY();
+      clearTimeout(resizeTimeout);
     };
-  }, [showSpotlight]);
+  }, [showSpotlight, springX, springY]);
 
   const pageVariants = {
     initial: { opacity: 0 },
@@ -106,13 +133,15 @@ export default function Layout() {
       {showSpotlight && (
         <motion.div
           className="spotlight pointer-events-none fixed z-0"
-          animate={{
+          style={{
             left: spotlightPosition.x,
             top: spotlightPosition.y,
-            opacity: 1
           }}
           initial={{ opacity: 0 }}
-          transition={{ type: "spring", damping: 15, stiffness: 90 }}
+          animate={{ opacity: 1 }}
+          transition={{
+            opacity: { duration: 0.2 }
+          }}
         />
       )}
       
