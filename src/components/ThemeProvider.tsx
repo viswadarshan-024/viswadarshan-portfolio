@@ -27,13 +27,16 @@ export function ThemeProvider({
   storageKey = "vite-ui-theme",
   ...props
 }: ThemeProviderProps) {
-  const [theme, setTheme] = useState<Theme>(
-    () => (localStorage.getItem(storageKey) as Theme) || defaultTheme
-  );
+  const [theme, setTheme] = useState<Theme>(() => {
+    // Always prioritize dark theme as default
+    const storedTheme = localStorage.getItem(storageKey) as Theme;
+    return storedTheme || defaultTheme;
+  });
 
   useEffect(() => {
     const root = window.document.documentElement;
     
+    // Remove any existing theme classes
     root.classList.remove("light", "dark");
     
     if (theme === "system") {
@@ -46,15 +49,19 @@ export function ThemeProvider({
       return;
     }
     
+    // Add current theme class
     root.classList.add(theme);
     
     // Add data-theme attribute for better CSS targeting
     root.setAttribute('data-theme', theme);
+    
+    // Add theme transition classes for smoother changes
+    root.classList.add('theme-transition');
   }, [theme]);
 
   // Force dark theme on initial load
   useEffect(() => {
-    // Ensure dark theme is always default
+    // Ensure dark theme is the default
     if (!localStorage.getItem(storageKey)) {
       localStorage.setItem(storageKey, "dark");
       setTheme("dark");
@@ -63,6 +70,9 @@ export function ThemeProvider({
     // Apply transition classes for smoother theme changes
     const root = window.document.documentElement;
     root.classList.add('transition-colors', 'duration-300');
+    
+    // Add page transition classes
+    document.body.classList.add('transition-opacity', 'duration-300');
   }, [storageKey]);
 
   const value = {

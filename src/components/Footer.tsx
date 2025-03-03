@@ -61,7 +61,7 @@ export default function Footer() {
                 <Linkedin size={18} />
               </a>
               <a 
-                href="#" 
+                href="https://twitter.com" 
                 target="_blank" 
                 rel="noreferrer" 
                 className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 transition"

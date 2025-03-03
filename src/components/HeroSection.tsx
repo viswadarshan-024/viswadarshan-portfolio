@@ -10,6 +10,18 @@ export default function HeroSection() {
   
   useEffect(() => {
     setIsLoaded(true);
+    
+    // Preload images for smoother experience
+    const imagesToPreload = [
+      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+      "https://images.unsplash.com/photo-1550751827-4bd374c3f58b",
+      "https://images.unsplash.com/photo-1673179874596-1b27a1883dab"
+    ];
+    
+    imagesToPreload.forEach(src => {
+      const img = new Image();
+      img.src = src;
+    });
   }, []);
   
   const containerVariants = {
@@ -49,7 +61,7 @@ export default function HeroSection() {
       transition: {
         duration: 3,
         repeat: Infinity,
-        repeatType: "loop",
+        repeatType: "loop" as const,
         ease: "easeInOut"
       }
     }
@@ -69,25 +81,32 @@ export default function HeroSection() {
       
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {Array.from({
-        length: 6
-      }).map((_, i) => <motion.div key={i} className="absolute rounded-full bg-gradient-to-tr from-primary/20 to-primary/5 dark:from-primary/10 dark:to-primary/5" initial={{
-        x: `${Math.random() * 100}%`,
-        y: `${Math.random() * 100}%`
-      }} animate={{
-        x: [`${Math.random() * 100}%`, `${Math.random() * 100}%`],
-        y: [`${Math.random() * 100}%`, `${Math.random() * 100}%`]
-      }} transition={{
-        duration: 15 + Math.random() * 10,
-        repeat: Infinity,
-        repeatType: "reverse",
-        ease: "easeInOut"
-      }} style={{
-        width: `${150 + Math.random() * 200}px`,
-        height: `${150 + Math.random() * 200}px`,
-        opacity: 0.1 + Math.random() * 0.15,
-        filter: "blur(40px)"
-      }} />)}
+        {Array.from({length: 6}).map((_, i) => (
+          <motion.div 
+            key={i} 
+            className="absolute rounded-full bg-gradient-to-tr from-primary/20 to-primary/5 dark:from-primary/10 dark:to-primary/5" 
+            initial={{
+              x: `${Math.random() * 100}%`,
+              y: `${Math.random() * 100}%`
+            }} 
+            animate={{
+              x: [`${Math.random() * 100}%`, `${Math.random() * 100}%`],
+              y: [`${Math.random() * 100}%`, `${Math.random() * 100}%`]
+            }} 
+            transition={{
+              duration: 15 + Math.random() * 10,
+              repeat: Infinity,
+              repeatType: "reverse",
+              ease: "easeInOut"
+            }} 
+            style={{
+              width: `${150 + Math.random() * 200}px`,
+              height: `${150 + Math.random() * 200}px`,
+              opacity: 0.1 + Math.random() * 0.15,
+              filter: "blur(40px)"
+            }} 
+          />
+        ))}
       </div>
 
       <motion.div initial="hidden" animate={isLoaded ? "visible" : "hidden"} variants={containerVariants} className="container mx-auto px-4 md:px-6 relative z-10 text-center">

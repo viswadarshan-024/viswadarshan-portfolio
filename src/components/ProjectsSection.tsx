@@ -3,13 +3,31 @@ import { motion } from "framer-motion";
 import ProjectCard from "./ProjectCard";
 import { Button } from "./ui/button";
 import { useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
 export default function ProjectsSection() {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: false, amount: 0.1 });
+  
+  useEffect(() => {
+    // Preload project images for better performance
+    const preloadImages = () => {
+      const imagesToPreload = [
+        "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+        "https://images.unsplash.com/photo-1550751827-4bd374c3f58b",
+        "https://images.unsplash.com/photo-1673179874596-1b27a1883dab"
+      ];
+      
+      imagesToPreload.forEach(src => {
+        const img = new Image();
+        img.src = src;
+      });
+    };
+    
+    preloadImages();
+  }, []);
   
   // Only show these 3 specific projects in home page
   const projects = [

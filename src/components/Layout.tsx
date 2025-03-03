@@ -10,14 +10,23 @@ export default function Layout() {
   const [showSpotlight, setShowSpotlight] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
   
-  // Using spring animation for smooth cursor movement
-  const springX = useSpring(0, { damping: 25, stiffness: 200, mass: 0.5 });
-  const springY = useSpring(0, { damping: 25, stiffness: 200, mass: 0.5 });
+  // Using spring animation for smooth cursor movement with better performance settings
+  const springX = useSpring(0, { damping: 30, stiffness: 250, mass: 0.3 });
+  const springY = useSpring(0, { damping: 30, stiffness: 250, mass: 0.3 });
 
   useEffect(() => {
     setIsLoaded(true);
     
+    // Throttle mouse movement for better performance
+    let lastRenderTime = 0;
+    const throttleMs = 10; // Lower value for smoother animation, higher for better performance
+    
     const handleMouseMove = (e: MouseEvent) => {
+      const currentTime = Date.now();
+      if (currentTime - lastRenderTime < throttleMs) return;
+      
+      lastRenderTime = currentTime;
+      
       // Set springs for smooth movement
       springX.set(e.clientX);
       springY.set(e.clientY);
@@ -26,6 +35,11 @@ export default function Layout() {
     };
 
     const handleTouchMove = (e: TouchEvent) => {
+      const currentTime = Date.now();
+      if (currentTime - lastRenderTime < throttleMs) return;
+      
+      lastRenderTime = currentTime;
+      
       if (e.touches.length > 0) {
         springX.set(e.touches[0].clientX);
         springY.set(e.touches[0].clientY);
@@ -34,12 +48,12 @@ export default function Layout() {
       }
     };
     
-    // Subscribe to spring updates
-    const unsubscribeX = springX.onChange(x => {
+    // Use the newer .on('change') syntax to avoid deprecation warnings
+    const unsubscribeX = springX.on('change', x => {
       setSpotlightPosition(prev => ({ ...prev, x }));
     });
     
-    const unsubscribeY = springY.onChange(y => {
+    const unsubscribeY = springY.on('change', y => {
       setSpotlightPosition(prev => ({ ...prev, y }));
     });
 
@@ -55,15 +69,15 @@ export default function Layout() {
       particleContainer.innerHTML = '';
       
       // Create new particles
-      for (let i = 0; i < 20; i++) {  // Reduced number of particles for better performance
+      for (let i = 0; i < 15; i++) {  // Reduced number of particles for better performance
         const particle = document.createElement('div');
         particle.className = 'particle';
         
         // Random properties
-        const size = Math.random() * 4 + 2; // Smaller particles for better performance
+        const size = Math.random() * 3 + 2; // Smaller particles for better performance
         const posX = Math.random() * 100;
         const posY = Math.random() * 100;
-        const opacity = Math.random() * 0.4 + 0.1;
+        const opacity = Math.random() * 0.3 + 0.1;
         const animDuration = Math.random() * 20 + 10;
         const animDelay = Math.random() * 5;
         
