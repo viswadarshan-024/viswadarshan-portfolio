@@ -83,7 +83,7 @@ const About = () => {
               <div className="w-full md:w-1/3">
                 <div className="aspect-square relative rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-xl">
                   <img 
-                    src="public/lovable-uploads/9321a1dc-07d1-44c7-8d96-ea2da32111cf.png" 
+                    src="/lovable-uploads/9321a1dc-07d1-44c7-8d96-ea2da32111cf.png" 
                     alt="" 
                     className="object-cover w-full h-full"
                     loading="eager"
