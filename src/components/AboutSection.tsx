@@ -57,7 +57,7 @@ export default function AboutSection() {
             }} />
               <motion.img 
                 src="public/lovable-uploads/512a72eb-2d73-4597-a699-d1fcca24a462.png" 
-                alt="Portrait image" 
+                alt="public/lovable-uploads/512a72eb-2d73-4597-a699-d1fcca24a462.png" 
                 className="rounded-xl shadow-xl w-full aspect-[4/5] object-cover" 
                 loading="eager" 
                 whileHover={{
