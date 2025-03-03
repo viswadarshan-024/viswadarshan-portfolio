@@ -56,7 +56,7 @@ export default function AboutSection() {
               opacity: 0.7
             }} />
               <motion.img 
-                src="/lovable-uploads/9321a1dc-07d1-44c7-8d96-ea2da32111cf.png" 
+                src="public/lovable-uploads/512a72eb-2d73-4597-a699-d1fcca24a462.png" 
                 alt="Portrait image" 
                 className="rounded-xl shadow-xl w-full aspect-[4/5] object-cover" 
                 loading="eager" 
