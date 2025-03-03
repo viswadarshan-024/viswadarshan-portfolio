@@ -1,6 +1,7 @@
 
 import { Link } from "react-router-dom";
 import { Github, Linkedin, Twitter, Mail } from "lucide-react";
+import { Button } from "./ui/button";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -23,18 +24,34 @@ export default function Footer() {
           <div className="space-y-3">
             <h3 className="font-medium text-sm">Quick Links</h3>
             <div className="flex flex-col space-y-2">
-              <Link to="/" className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition">
-                Home
-              </Link>
-              <Link to="/about" className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition">
-                About
-              </Link>
-              <Link to="/projects" className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition">
-                Projects
-              </Link>
-              <Link to="/contact" className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition">
-                Contact
-              </Link>
+              <Button 
+                variant="link" 
+                className="justify-start h-auto p-0 text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100"
+                asChild
+              >
+                <Link to="/">Home</Link>
+              </Button>
+              <Button 
+                variant="link" 
+                className="justify-start h-auto p-0 text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100"
+                asChild
+              >
+                <Link to="/about">About</Link>
+              </Button>
+              <Button 
+                variant="link" 
+                className="justify-start h-auto p-0 text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100"
+                asChild
+              >
+                <Link to="/projects">Projects</Link>
+              </Button>
+              <Button 
+                variant="link" 
+                className="justify-start h-auto p-0 text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100"
+                asChild
+              >
+                <Link to="/contact">Contact</Link>
+              </Button>
             </div>
           </div>
 
@@ -42,40 +59,67 @@ export default function Footer() {
           <div className="space-y-3">
             <h3 className="font-medium text-sm">Connect</h3>
             <div className="flex space-x-4">
-              <a 
-                href="https://github.com/viswadarshan-024" 
-                target="_blank" 
-                rel="noreferrer" 
-                className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 transition"
-                aria-label="GitHub"
+              <Button 
+                variant="ghost" 
+                size="icon" 
+                className="h-8 w-8 rounded-full text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
+                asChild
               >
-                <Github size={18} />
-              </a>
-              <a 
-                href="https://www.linkedin.com/in/viswadarshan-r-r-68b8b124b/" 
-                target="_blank" 
-                rel="noreferrer" 
-                className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 transition"
-                aria-label="LinkedIn"
+                <a 
+                  href="https://github.com/viswadarshan-024" 
+                  target="_blank" 
+                  rel="noreferrer" 
+                  aria-label="GitHub"
+                >
+                  <Github size={18} />
+                </a>
+              </Button>
+              
+              <Button 
+                variant="ghost" 
+                size="icon" 
+                className="h-8 w-8 rounded-full text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
+                asChild
               >
-                <Linkedin size={18} />
-              </a>
-              <a 
-                href="https://twitter.com" 
-                target="_blank" 
-                rel="noreferrer" 
-                className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 transition"
-                aria-label="Twitter"
+                <a 
+                  href="https://www.linkedin.com/in/viswadarshan-r-r-68b8b124b/" 
+                  target="_blank" 
+                  rel="noreferrer" 
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin size={18} />
+                </a>
+              </Button>
+              
+              <Button 
+                variant="ghost" 
+                size="icon" 
+                className="h-8 w-8 rounded-full text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
+                asChild
               >
-                <Twitter size={18} />
-              </a>
-              <a 
-                href="mailto:viswadarshanrramiya@gmail.com" 
-                className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 transition"
-                aria-label="Email"
+                <a 
+                  href="https://twitter.com" 
+                  target="_blank" 
+                  rel="noreferrer" 
+                  aria-label="Twitter"
+                >
+                  <Twitter size={18} />
+                </a>
+              </Button>
+              
+              <Button 
+                variant="ghost" 
+                size="icon" 
+                className="h-8 w-8 rounded-full text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
+                asChild
               >
-                <Mail size={18} />
-              </a>
+                <a 
+                  href="mailto:viswadarshanrramiya@gmail.com" 
+                  aria-label="Email"
+                >
+                  <Mail size={18} />
+                </a>
+              </Button>
             </div>
           </div>
         </div>
