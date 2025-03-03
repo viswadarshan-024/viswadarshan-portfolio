@@ -84,7 +84,7 @@ const About = () => {
                 <div className="aspect-square relative rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-xl">
                   <img 
                     src="public/lovable-uploads/9321a1dc-07d1-44c7-8d96-ea2da32111cf.png" 
-                    alt="Profile" 
+                    alt="public/lovable-uploads/9321a1dc-07d1-44c7-8d96-ea2da32111cf.png" 
                     className="object-cover w-full h-full"
                     loading="eager"
                   />
