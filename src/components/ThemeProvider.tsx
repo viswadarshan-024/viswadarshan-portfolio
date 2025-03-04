@@ -1,8 +1,8 @@
 
 import { createContext, useContext, useEffect, useState } from "react";
 
-// type Theme = "dark" | "light" | "system;
-type Theme = "dark";
+type Theme = "dark" | "light" | "system;
+// type Theme = "dark";
 
 
 type ThemeProviderProps = {
