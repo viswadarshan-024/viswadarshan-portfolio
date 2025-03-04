@@ -7,9 +7,9 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import emailjs from 'emailjs-com';
 
-const EMAILJS_SERVICE_ID = "service_pqlfz6e";
-const EMAILJS_TEMPLATE_ID = "template_jg3gx0j";
-const EMAILJS_USER_ID = "7xmFNd0JC_-FeJ1Fd";
+const EMAILJS_SERVICE_ID = "service_hdy7b8q";
+const EMAILJS_TEMPLATE_ID = "template_4wn29so";
+const EMAILJS_USER_ID = "miEjfHKU-LNJV8WsY";
 
 export default function ContactSection() {
   const { toast } = useToast();
