@@ -119,6 +119,19 @@ export default function HeroSection() {
             Welcome to my portfolio
           </motion.span>
         </motion.div>
+        <motion.h1 variants={itemVariants} className="text-4xl md:text-5xl lg:text-7xl font-display font-bold tracking-tight mb-6">
+  <motion.span className="block" whileHover={{ scale: 1.01 }}>
+    <span className="text-gray-800 dark:text-gray-200">Hi, I'm</span>  
+    <motion.span 
+      className="bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 dark:from-gray-100 dark:to-gray-400"
+      animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
+      transition={{ duration: 5, repeat: Infinity, repeatType: "mirror" }}
+    >
+      Viswadarshan
+    </motion.span>
+  </motion.span>
+</motion.h1>
+        
 
         <motion.h1 variants={itemVariants} className="text-4xl md:text-5xl lg:text-7xl font-display font-bold tracking-tight mb-6">
           <motion.span className="block" whileHover={{
