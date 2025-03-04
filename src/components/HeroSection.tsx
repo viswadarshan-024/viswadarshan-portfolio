@@ -125,7 +125,7 @@ export default function HeroSection() {
   className="text-5xl md:text-6xl lg:text-8xl font-display font-bold tracking-tight mb-6"
 >
   <motion.span className="block" whileHover={{ scale: 1.02 }}>
-    <span className="text-gray-800 dark:text-gray-200">Hi, I'm</span>  
+    <span className="text-gray-800 dark:text-gray-200">Hi, I'm </span>  
     <motion.span 
       className="bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 dark:from-gray-100 dark:to-gray-400"
       animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
