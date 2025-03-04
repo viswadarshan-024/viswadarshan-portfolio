@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
@@ -21,6 +21,10 @@ export default function ContactSection() {
     message: ""
   });
 
+  useEffect(() => {
+    emailjs.init(EMAILJS_USER_ID);
+  }, []);
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
@@ -31,21 +35,28 @@ export default function ContactSection() {
     setIsSubmitting(true);
 
     try {
+      console.log("Sending email with params:", {
+        service_id: EMAILJS_SERVICE_ID,
+        template_id: EMAILJS_TEMPLATE_ID,
+        user_id: EMAILJS_USER_ID
+      });
+
       const templateParams = {
-        to_email: "viswadarshanrramiya@gmail.com",
-        from_name: formData.name,
-        from_email: formData.email,
+        name: formData.name,
+        email: formData.email,
         subject: formData.subject,
-        message: formData.message
+        message: formData.message,
+        to_email: "viswadarshanrramiya@gmail.com"
       };
 
-      await emailjs.send(
+      const response = await emailjs.send(
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
-        templateParams,
-        EMAILJS_USER_ID
+        templateParams
       );
 
+      console.log("Email sent successfully!", response);
+      
       toast({
         title: "Message sent successfully!",
         description: "Thank you for your message. I'll get back to you soon.",
