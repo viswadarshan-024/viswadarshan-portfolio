@@ -23,6 +23,7 @@ export default function ContactForm() {
   });
 
   useEffect(() => {
+    // Initialize EmailJS with your user ID
     emailjs.init(EMAILJS_USER_ID);
   }, []);
 
@@ -36,20 +37,20 @@ export default function ContactForm() {
     setIsSubmitting(true);
 
     try {
-      console.log("Sending email with params:", {
-        service_id: EMAILJS_SERVICE_ID,
-        template_id: EMAILJS_TEMPLATE_ID,
-      });
-
-      // Based on your EmailJS template, we need to adjust the parameter names
+      console.log("Preparing to send email with EmailJS...");
+      
+      // Create template params matching EXACTLY your EmailJS template variables
       const templateParams = {
-        from_name: formData.name,          // {{from_name}} in template
-        from_email: formData.email,        // {{from_email}} in template
-        subject: formData.subject,         // {{subject}} in template
-        message: formData.message,         // {{message}} in template
-        to_name: "Viswadarshan",           // Recipient name for the email template
-        reply_to: formData.email           // Add this to allow direct replies
+        from_name: formData.name,         // {{from_name}} in template
+        from_email: formData.email,       // {{from_email}} in template
+        subject: formData.subject,        // {{subject}} in template
+        message: formData.message,        // {{message}} in template
+        to_name: "Viswadarshan",          // {{to_name}} in template
+        reply_to: formData.email          // {{reply_to}} in template
       };
+
+      console.log("Template parameters:", templateParams);
+      console.log("Sending with service:", EMAILJS_SERVICE_ID, "template:", EMAILJS_TEMPLATE_ID);
 
       const response = await emailjs.send(
         EMAILJS_SERVICE_ID,
