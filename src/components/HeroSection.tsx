@@ -119,8 +119,12 @@ export default function HeroSection() {
             Welcome to my portfolio
           </motion.span>
         </motion.div>
-        <motion.h1 variants={itemVariants} className="text-4xl md:text-5xl lg:text-7xl font-display font-bold tracking-tight mb-6">
-  <motion.span className="block" whileHover={{ scale: 1.01 }}>
+        {/* Highlighted Name Section */}
+<motion.h1 
+  variants={itemVariants} 
+  className="text-5xl md:text-6xl lg:text-8xl font-display font-bold tracking-tight mb-6"
+>
+  <motion.span className="block" whileHover={{ scale: 1.02 }}>
     <span className="text-gray-800 dark:text-gray-200">Hi, I'm</span>  
     <motion.span 
       className="bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 dark:from-gray-100 dark:to-gray-400"
@@ -131,27 +135,26 @@ export default function HeroSection() {
     </motion.span>
   </motion.span>
 </motion.h1>
-        
 
-        <motion.h1 variants={itemVariants} className="text-4xl md:text-5xl lg:text-7xl font-display font-bold tracking-tight mb-6">
-          <motion.span className="block" whileHover={{
-          scale: 1.01
-        }}>Building Intelligent AI</motion.span>
-          <motion.span className="block mt-2" whileHover={{
-          scale: 1.01
-        }}>
-            <span className="text-gray-800 dark:text-gray-200">Solutions with</span>{" "}
-            <motion.span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 dark:from-gray-100 dark:to-gray-400" animate={{
-            backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
-          }} transition={{
-            duration: 5,
-            repeat: Infinity,
-            repeatType: "mirror"
-          }}>
-              Innovation & Precision
-            </motion.span>
-          </motion.span>
-        </motion.h1>
+{/* Slightly Smaller Tagline */}
+<motion.h1 
+  variants={itemVariants} 
+  className="text-3xl md:text-4xl lg:text-6xl font-display font-bold tracking-tight mb-6"
+>
+  <motion.span className="block" whileHover={{ scale: 1.01 }}>
+    Building Intelligent AI
+  </motion.span>
+  <motion.span className="block mt-2" whileHover={{ scale: 1.01 }}>
+    <span className="text-gray-800 dark:text-gray-200">Solutions with</span>  
+    <motion.span 
+      className="bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 dark:from-gray-100 dark:to-gray-400"
+      animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
+      transition={{ duration: 5, repeat: Infinity, repeatType: "mirror" }}
+    >
+      Innovation & Precision
+    </motion.span>
+  </motion.span>
+</motion.h1>
 
         <motion.p variants={itemVariants} className="max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-400 mb-8">I'm an AI Developer & Researcher specializing in NLP, Generative AI, focusing on building efficient, scalable, and impactful AI solutions. Let's innovate and push the boundaries of AI together!</motion.p>
 
