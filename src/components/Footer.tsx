@@ -25,25 +25,25 @@ export default function Footer() {
             <nav className="flex flex-col space-y-2">
               <Link 
                 to="/" 
-                className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors cursor-pointer"
+                className="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors cursor-pointer"
               >
                 Home
               </Link>
               <Link 
                 to="/about" 
-                className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors cursor-pointer"
+                className="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors cursor-pointer"
               >
                 About
               </Link>
               <Link 
                 to="/projects" 
-                className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors cursor-pointer"
+                className="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors cursor-pointer"
               >
                 Projects
               </Link>
               <Link 
                 to="/contact" 
-                className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors cursor-pointer"
+                className="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors cursor-pointer"
               >
                 Contact
               </Link>
@@ -59,7 +59,7 @@ export default function Footer() {
                 target="_blank" 
                 rel="noreferrer" 
                 aria-label="GitHub"
-                className="rounded-full p-2 text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors cursor-pointer"
+                className="rounded-full p-2 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors cursor-pointer"
               >
                 <Github size={18} />
               </a>
@@ -69,7 +69,7 @@ export default function Footer() {
                 target="_blank" 
                 rel="noreferrer" 
                 aria-label="LinkedIn"
-                className="rounded-full p-2 text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors cursor-pointer"
+                className="rounded-full p-2 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors cursor-pointer"
               >
                 <Linkedin size={18} />
               </a>
@@ -79,7 +79,7 @@ export default function Footer() {
                 target="_blank" 
                 rel="noreferrer" 
                 aria-label="Twitter"
-                className="rounded-full p-2 text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors cursor-pointer"
+                className="rounded-full p-2 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors cursor-pointer"
               >
                 <Twitter size={18} />
               </a>
@@ -87,7 +87,7 @@ export default function Footer() {
               <a 
                 href="mailto:viswadarshanrramiya@gmail.com" 
                 aria-label="Email"
-                className="rounded-full p-2 text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors cursor-pointer"
+                className="rounded-full p-2 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors cursor-pointer"
               >
                 <Mail size={18} />
               </a>
@@ -95,7 +95,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 pt-4 border-t border-gray-200 dark:border-gray-800 text-sm text-center text-gray-500 dark:text-gray-400">
+        <div className="mt-8 pt-4 border-t border-gray-200 dark:border-gray-800 text-sm text-center text-gray-600 dark:text-gray-400">
           <p>© {currentYear} Portfolio. All rights reserved.</p>
         </div>
       </div>

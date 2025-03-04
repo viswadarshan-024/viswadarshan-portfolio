@@ -28,7 +28,7 @@ export function ThemeProvider({
   ...props
 }: ThemeProviderProps) {
   const [theme, setTheme] = useState<Theme>(() => {
-    // Always prioritize dark theme as default
+    // Get stored theme or use default
     const storedTheme = localStorage.getItem(storageKey) as Theme;
     return storedTheme || defaultTheme;
   });
@@ -59,12 +59,12 @@ export function ThemeProvider({
     root.classList.add('theme-transition');
   }, [theme]);
 
-  // Force dark theme on initial load
+  // Apply initial theme settings
   useEffect(() => {
-    // Ensure dark theme is the default
+    // Initialize theme if not already set
     if (!localStorage.getItem(storageKey)) {
-      localStorage.setItem(storageKey, "dark");
-      setTheme("dark");
+      localStorage.setItem(storageKey, defaultTheme);
+      setTheme(defaultTheme);
     }
     
     // Apply transition classes for smoother theme changes
@@ -73,7 +73,7 @@ export function ThemeProvider({
     
     // Add page transition classes
     document.body.classList.add('transition-opacity', 'duration-300');
-  }, [storageKey]);
+  }, [storageKey, defaultTheme]);
 
   const value = {
     theme,

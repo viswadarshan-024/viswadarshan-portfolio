@@ -27,10 +27,11 @@
   transition: opacity 0.15s ease;
 }
 
+/* Improved spotlight effect for light mode */
 .light .spotlight {
   background: radial-gradient(
     circle at center,
-    rgba(0, 0, 0, 0.04) 0%,
+    rgba(0, 0, 0, 0.07) 0%,
     rgba(0, 0, 0, 0) 70%
   );
 }
@@ -49,7 +50,7 @@
 }
 
 .light .particle {
-  background-color: rgba(0, 0, 0, 0.03);
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 @keyframes float {
@@ -74,7 +75,7 @@
 }
 
 .light .blob {
-  opacity: 0.15;
+  opacity: 0.25;
 }
 
 .blob-1 {
@@ -104,17 +105,17 @@
   animation-delay: -10s;
 }
 
-/* Light theme blob colors - improved visibility */
+/* Improved light theme blob colors with higher contrast */
 .light .blob-1 {
-  background: radial-gradient(circle at center, rgba(100, 100, 255, 0.3), rgba(100, 100, 255, 0.1));
+  background: radial-gradient(circle at center, rgba(70, 70, 225, 0.35), rgba(70, 70, 225, 0.1));
 }
 
 .light .blob-2 {
-  background: radial-gradient(circle at center, rgba(100, 220, 150, 0.3), rgba(100, 220, 150, 0.1));
+  background: radial-gradient(circle at center, rgba(70, 180, 120, 0.35), rgba(70, 180, 120, 0.1));
 }
 
 .light .blob-3 {
-  background: radial-gradient(circle at center, rgba(255, 100, 150, 0.3), rgba(255, 100, 150, 0.1));
+  background: radial-gradient(circle at center, rgba(225, 70, 120, 0.35), rgba(225, 70, 120, 0.1));
 }
 
 /* Improved grid backgrounds */
@@ -132,14 +133,14 @@
     linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
 }
 
-/* Improved light mode styling */
+/* Improved light mode styling with better text contrast */
 .light {
-  background-color: #f8f9fa;
+  background-color: #ffffff;
   color: #1a1a1a;
 }
 
 .light .container {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.85);
   border-radius: 1rem;
 }
 
@@ -155,7 +156,7 @@
 }
 
 .light .hover-card:hover {
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
 }
 
 /* Improved scrolling */
@@ -194,13 +195,13 @@ html {
   background: rgba(0, 0, 0, 0.25);
 }
 
-/* Enhanced light theme styles */
+/* Enhanced light theme text colors with better contrast */
 .light .text-gray-500 {
-  color: #5A5A5A;
+  color: #444444;
 }
 
 .light .text-gray-400 {
-  color: #6B6B6B;
+  color: #555555;
 }
 
 .light .bg-gray-950 {
@@ -208,11 +209,11 @@ html {
 }
 
 .light .border-gray-800 {
-  border-color: #e5e7eb;
+  border-color: #e0e0e0;
 }
 
 .light .border-gray-200 {
-  border-color: #f3f4f6;
+  border-color: #eeeeee;
 }
 
 /* Pulse animation for activity indicators */
@@ -246,6 +247,7 @@ html {
 .light .card {
   background-color: white;
   border: 1px solid #e9ecef;
+  color: #333333;
 }
 
 /* Add smooth transitions for theme changes */
@@ -266,6 +268,23 @@ img.loading {
 
 img.loaded {
   opacity: 1;
+}
+
+/* Light theme typography enhancements for better visibility */
+.light h1, .light h2, .light h3, .light h4, .light h5, .light h6 {
+  color: #222222;
+}
+
+.light p, .light span, .light li {
+  color: #333333;
+}
+
+.light a {
+  color: #0056b3;
+}
+
+.light a:hover {
+  color: #003d82;
 }
 
 /* Responsive adjustments for light theme */
