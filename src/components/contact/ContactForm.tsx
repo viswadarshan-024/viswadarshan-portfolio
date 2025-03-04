@@ -9,7 +9,7 @@ import emailjs from 'emailjs-com';
 
 // EmailJS configuration
 const EMAILJS_SERVICE_ID = "service_hdy7b8q";
-const EMAILJS_TEMPLATE_ID = "template_4wn29so";
+const EMAILJS_TEMPLATE_ID = "template_soh87sp";
 const EMAILJS_USER_ID = "miEjfHKU-LNJV8WsY";
 
 export default function ContactForm() {
