@@ -11,4 +11,6 @@ Building this was more than just assembling code—it was about weaving intellig
 
 ## 🎯 Connect with Me
  [**Portfolio**](https://viswadarshan.netlify.app/)
-[**GitHub**](https://github.com/viswadarshan-024)   [**LinkedIn**](https://www.linkedin.com/in/viswadarshan-r-r-68b8b124b/)
+
+[**GitHub**](https://github.com/viswadarshan-024)
+ [**LinkedIn**](https://www.linkedin.com/in/viswadarshan-r-r-68b8b124b/)
