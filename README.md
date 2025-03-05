@@ -1,6 +1,6 @@
 # Personal Portfolio
 
-A **minimalistic yet powerful** portfolio showcasing my skills, projects, and experiences—crafted with the synergy of **AI-powered tools and modern web technologies.**
+A **minimalistic yet powerful** portfolio showcasing my skills, projects, and experiences crafted with the synergy of **AI-powered tools and modern web technologies.**
 
 🔗 **[Visit Portfolio](https://viswadarshan.netlify.app/)**
 
@@ -11,5 +11,5 @@ Building this was more than just assembling code—it was about weaving intellig
 
 ## 🎯 Connect with Me
 💼 **Portfolio:** [viswadarshan.netlify.app](https://viswadarshan.netlify.app/)  
-🐙 **GitHub:** [github.com/your-username](https://github.com/your-username)  
+🐙 **GitHub:** [github.com/your-username](https://github.com/viswadarshan-024)  
 🔗 **LinkedIn:** [linkedin.com/in/your-profile](https://linkedin.com/in/your-profile)
