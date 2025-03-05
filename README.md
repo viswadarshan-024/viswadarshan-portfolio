@@ -7,7 +7,7 @@ A **minimalistic yet powerful** portfolio showcasing my skills, projects, and ex
 ## 📌 About the Project
 This portfolio is designed to establish a **strong digital presence**, reflecting my technical expertise and creative approach. It integrates AI-powered tools to enhance the development process and ensure seamless interaction.
 
-Building this was more than just assembling code—it was about weaving intelligence into interaction. While I had the vision, the journey was guided by a symphony of AI-powered tools, each adding its own unique touch to the process.
+Building this was more than just assembling code it was about weaving intelligence into interaction. While I had the vision, the journey was guided by a symphony of AI-powered tools, each adding its own unique touch to the process.
 
 ## 🎯 Connect with Me
  [**Portfolio**](https://viswadarshan.netlify.app/)
