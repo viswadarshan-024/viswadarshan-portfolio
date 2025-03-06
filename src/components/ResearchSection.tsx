@@ -19,7 +19,7 @@ export default function ResearchSection() {
     journal: "National Level Research Conclave 2025",
     date: "February 2025",
     abstract: "This paper examines how implementing Tamil tokenizers from scratch for domain and task specific datasets.",
-    link: "https://drive.google.com/file/d/155vnpqCzjrLpc6k3jj07OS-ciIdBv6Mz/view"
+    link: ""
   }];
   const containerVariants = {
     hidden: {
