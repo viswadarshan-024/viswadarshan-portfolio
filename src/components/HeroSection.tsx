@@ -116,7 +116,7 @@ export default function HeroSection() {
         }} whileTap={{
           scale: 0.98
         }}>
-            Welcome to my portfolio
+            It's Passion All the Way Through
           </motion.span>
         </motion.div>
 <motion.h1 
