@@ -61,16 +61,6 @@ const Projects = () => {
     },
     {
       id: 6,
-      title: "Image Recognition API",
-      description: "An API that uses deep learning to recognize and classify objects in images.",
-      tags: ["PyTorch", "FastAPI", "Computer Vision"],
-      image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7",
-      demoLink: "#",
-      githubLink: "#",
-      category: "AI Models"
-    },
-    {
-      id: 7,
       title: "QR Code Payment App",
       description: "A bus commuting system designed to simplify fare payments and provide seamless travel experiences for passengers.",
       tags: ["Android Studio", "MySQL", "RazorPay Payment System"],
@@ -79,7 +69,7 @@ const Projects = () => {
       category: "Mobile Apps"
     },
     {
-      id: 8,
+      id: 7,
       title: "Taplyf App",
       description: "A comprehensive design of NFC Fair Payment Application by Taplyf.",
       tags: ["Figma", "UI/UX"],
@@ -89,7 +79,7 @@ const Projects = () => {
       category: "UI/UX Design"
     },
     {
-      id: 9,
+      id: 8,
       title: "Magnus Webpage Design",
       description: "A comprehensive Web design for the Real time emotion Analyst Application.",
       tags: ["Figma", "UI/UX"],
@@ -99,7 +89,7 @@ const Projects = () => {
       category: "UI/UX Design"
     },
     {
-      id: 10,
+      id: 9,
       title: "ANN Application",
       description: "Customer Churn Prediction App using Tensorflow and Python",
       tags: ["Python", "Tensorflow", "Streamlit"],
@@ -109,7 +99,7 @@ const Projects = () => {
       category: "AI Applications"
     },
     {
-      id: 11,
+      id: 10,
       title: "SummariBot",
       description: "Document Summarization and Interactive Chatbot Application",
       tags: ["Python", "HF Inference", "Streamlit", "Groq AI"],
@@ -119,7 +109,7 @@ const Projects = () => {
       category: "AI Applications"
     },
     {
-      id: 12,
+      id: 11,
       title: "MentAI Learning Assistant",
       description: "An interactive application assist with learning Data Science and Full Stack Development.",
       tags: ["Python", "Groq AI", "Streamlit"],
@@ -129,7 +119,7 @@ const Projects = () => {
       category: "AI Applications"
     },
     {
-      id: 13,
+      id: 12,
       title: "RoBERT PD Model",
       description: "Robust Paraphrase Detection RoBERT Transformer Model",
       tags: ["HF Transformer", "Transfomer Architecture", "NLP"],
@@ -139,7 +129,7 @@ const Projects = () => {
       category: "AI Models"
     },
     {
-      id: 14,
+      id: 13,
       title: "BERT PD Model",
       description: "Robust Paraphrase Detection BERT Transformer Model",
       tags: ["HF Transformer", "Transfomer Architecture", "NLP"],
@@ -149,7 +139,7 @@ const Projects = () => {
       category: "AI Models"
     },
     {
-      id: 15,
+      id: 14,
       title: "MPNet PD Model",
       description: "Robust Paraphrase Detection MPNet Transformer Model",
       tags: ["HF Transformer", "Transfomer Architecture", "NLP"],
@@ -159,7 +149,7 @@ const Projects = () => {
       category: "AI Models"
     },
     {
-      id: 16,
+      id: 15,
       title: "Tamil BERT",
       description: "Specifically Trained BERT model for Tamil",
       tags: ["HF Transformer", "Transfomer Architecture", "NLP"],
