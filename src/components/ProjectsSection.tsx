@@ -41,13 +41,13 @@ export default function ProjectsSection() {
       category: "AI Applications"
     },
     {
-      title: "RoBERT PD Model",
-      description: "Robust Paraphrase Detection RoBERT Transformer Model",
-      tags: ["HF Transformer", "Transfomer Architecture", "NLP"],
+      title: "திருக்குறள் AI",
+      description: "AI-agentic application that retrieves exact Tamil Kurals based on user queries ensuring precise and efficient results through an agentic workflow.",
+      tags: ["FAISS", "Llama 2", "Sentence Transformer", "Python", "Streamlit"],
       image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b",
-      demoLink: "https://huggingface.co/viswadarshan06/pd-robert",
-      githubLink: "https://github.com/viswadarshan-024/pd-robert",
-      category: "AI Models"
+      demoLink: "https://kural-ai.streamlit.app/",
+      githubLink: "https://github.com/viswadarshan-024/Thirukkural-AI",
+      category: "AI Application"
     },
     {
       title: "Image Sim AI",
