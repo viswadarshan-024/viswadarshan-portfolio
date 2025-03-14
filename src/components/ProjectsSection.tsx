@@ -50,14 +50,14 @@ export default function ProjectsSection() {
       category: "AI Models"
     },
     {
-      title: "Personal Chatbot",
-      description: "Personal Chatbot with Multi-Session Management seamlessly.",
-      tags: ["Langchain", "Groq AI", "Streamlit"],
-      image: "https://images.unsplash.com/photo-1673179874596-1b27a1883dab",
-      demoLink: "https://my-personalchatbot.streamlit.app/",
-      githubLink: "https://github.com/viswadarshan-024/personal_chatbot",
-      category: "AI Applications"
-    }
+      title: "Image Sim AI",
+      description: "This application measures the similarity between two images using various computer vision techniques.",
+      tags: ["OpenCV", "Streamlit", "SciPy"],
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
+      demoLink: "https://simageai.streamlit.app/",
+      githubLink: "https://github.com/viswadarshan-024/image-similarity-ai",
+      category: "AI Models"
+    },
   ];
 
   const containerVariants = {
