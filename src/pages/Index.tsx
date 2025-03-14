@@ -5,7 +5,7 @@ import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import ContactSection from "@/components/ContactSection";
-import ResearchSection from "@/components/ResearchSection";
+// import ResearchSection from "@/components/ResearchSection";
 // import TestimonialsSection from "@/components/TestimonialsSection";
 // import BlogsSection from "@/components/BlogsSection";
 // import CodeSnippetsSection from "@/components/CodeSnippetsSection";
@@ -88,6 +88,7 @@ const Index = () => {
         <AboutSection />
       </motion.div>
       
+      {/* Research section temporarily removed
       <motion.div 
         variants={sectionVariants}
         initial="initial"
@@ -96,6 +97,7 @@ const Index = () => {
       >
         <ResearchSection />
       </motion.div>
+      */}
       
       <motion.div 
         variants={sectionVariants}
