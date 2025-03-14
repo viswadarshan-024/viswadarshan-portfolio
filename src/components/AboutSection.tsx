@@ -87,11 +87,11 @@ export default function AboutSection() {
               About Me
             </motion.h2>
             
-            <motion.p className="text-gray-600 dark:text-gray-400 mb-6" variants={fadeInUpVariants}>I am a pre-final year B.Tech student in Computer Science and Business Systems, specializing in Natural Language Processing (NLP), Generative AI, and AI system development. My expertise lies in low-resource language processing, LLM fine-tuning, tokenization, and developing scalable AI products.</motion.p>
+            <motion.p className="text-gray-600 dark:text-gray-400 mb-6" variants={fadeInUpVariants}>I am a pre-final year B.Tech student in Computer Science and Business Systems, specializing in Natural Language Processing (NLP), Generative AI, and AI system development. My expertise lies in building AI-driven applications, including LLM fine-tuning, autonomous AI agents, and specialized AI solutions for business use cases.</motion.p>
             
             <motion.p className="text-gray-600 dark:text-gray-400 mb-8" variants={fadeInUpVariants} transition={{
             delay: 0.1
-          }}>I actively work on AI research and real-world applications, including multilingual chatbots, AI-driven learning platforms, and storytelling AI. With a deep technical focus, I build efficient and high-performing AI models while continuously exploring new advancements in the field.</motion.p>
+          }}>I focus on developing scalable AI products, from custom NLP models to autonomous AI systems that integrate seamlessly into real-world applications. My work spans multilingual AI, intelligent automation, and RAG-based AI solutions, ensuring AI is not just powerful but also practical for business and enterprise needs.</motion.p>
 
             {/* Passion & Mission Section */}
             <motion.div className="mb-8 p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm" variants={fadeInUpVariants} transition={{
@@ -109,7 +109,7 @@ export default function AboutSection() {
                   </div>
                   <div>
                     <h3 className="font-display font-medium text-lg mb-2">My Passion</h3>
-                    <p className="text-gray-600 dark:text-gray-400">I am deeply passionate about Natural Language Processing, Generative AI, and multilingual AI systems, with a strong focus on low-resource languages like Tamil. I thrive on solving complex AI challenges, from custom tokenization and LLM fine-tuning to real-world AI applications that make AI more accessible, efficient, and impactful.</p>
+                    <p className="text-gray-600 dark:text-gray-400">I am deeply passionate about building AI solutions that drive real-world impact. My focus is on developing domain-specific LLMs, enterprise-ready AI systems, and NLP-driven automation tools. From custom tokenization pipelines to fine-tuned LLMs for business intelligence, I thrive on designing high-performance AI solutions that enhance decision-making, automation, and user interaction.</p>
                   </div>
                 </motion.div>
                 
@@ -124,7 +124,7 @@ export default function AboutSection() {
                   </div>
                   <div>
                     <h3 className="font-display font-medium text-lg mb-2">My Mission</h3>
-                    <p className="text-gray-600 dark:text-gray-400">My mission is to advance AI research and development by building scalable, high-performance AI models and applications. I aim to bridge the gap between cutting-edge AI research and real-world implementation, ensuring that AI serves diverse linguistic and cultural communities. Through continuous learning, experimentation, and innovation, I strive to push the boundaries of AI-driven language understanding and human-computer interaction.</p>
+                    <p className="text-gray-600 dark:text-gray-400">My mission is to bridge AI development with real-world applications, ensuring that AI models are not just theoretical but are optimized for production, scalability, and efficiency. Through continuous learning, hands-on development, and AI product innovation, I strive to push the boundaries of AI application development and contribute to the next generation of intelligent systems.<br>At the same time, I am committed to transforming Tamil AI from a research focus into scalable, enterprise-ready solutions—developing AI-driven products that empower businesses and communities by making low-resource language AI as powerful and adaptable as mainstream AI systems.</p>
                   </div>
                 </motion.div>
               </div>
