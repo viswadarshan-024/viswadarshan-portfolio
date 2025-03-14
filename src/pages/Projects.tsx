@@ -12,6 +12,16 @@ const Projects = () => {
   const allProjects = [
     {
       id: 1,
+      title: "திருக்குறள் AI",
+      description: "AI-agentic application that retrieves exact Tamil Kurals based on user queries ensuring precise and efficient results through an agentic workflow.",
+      tags: ["FAISS", "Llama 2", "Sentence Transformer", "Python", "Streamlit"],
+      image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b",
+      demoLink: "https://kural-ai.streamlit.app/",
+      githubLink: "https://github.com/viswadarshan-024/Thirukkural-AI",
+      category: "AI Application"
+    },
+    {
+      id: 2,
       title: "AI Search Assistant",
       description: "An AI-powered search assistant that performs Google searches and delivers relevant results with intelligent responses.",
       tags: ["Streamlit", "Groq AI", "Google Search Engine"],
@@ -21,7 +31,7 @@ const Projects = () => {
       category: "AI Applications"
     },
     {
-      id: 2,
+      id: 3,
       title: "Portfolio Website",
       description: "A minimalist portfolio for a AI Developer showcasing their work with elegant animations.",
       tags: ["Next.js", "Tailwind CSS", "Framer Motion", "Typescript"],
@@ -31,7 +41,7 @@ const Projects = () => {
       category: "UI/UX Design"
     },
     {
-      id: 3,
+      id: 4,
       title: "Image Sim AI",
       description: "This application measures the similarity between two images using various computer vision techniques.",
       tags: ["OpenCV", "Streamlit", "SciPy"],
@@ -40,7 +50,7 @@ const Projects = () => {
       category: "AI Models"
     },
     {
-      id: 4,
+      id: 5,
       title: "Personal Chatbot",
       description: "Personal Chatbot with Multi-Session Management seamlessly.",
       tags: ["Langchain", "Groq AI", "Streamlit"],
@@ -50,7 +60,7 @@ const Projects = () => {
       category: "AI Applications"
     },
     {
-      id: 5,
+      id: 6,
       title: "Multilingual LLM Translator",
       description: "The application allows users to translate text into a variety of target languages effortlessly.",
       tags: ["Python", "Groq AI", "Langchain"],
@@ -60,7 +70,7 @@ const Projects = () => {
       category: "AI Applications"
     },
     {
-      id: 6,
+      id: 7,
       title: "QR Code Payment App",
       description: "A bus commuting system designed to simplify fare payments and provide seamless travel experiences for passengers.",
       tags: ["Android Studio", "MySQL", "RazorPay Payment System"],
@@ -69,7 +79,7 @@ const Projects = () => {
       category: "Mobile Apps"
     },
     {
-      id: 7,
+      id: 8,
       title: "Taplyf App",
       description: "A comprehensive design of NFC Fair Payment Application by Taplyf.",
       tags: ["Figma", "UI/UX"],
@@ -79,7 +89,7 @@ const Projects = () => {
       category: "UI/UX Design"
     },
     {
-      id: 8,
+      id: 9,
       title: "Magnus Webpage Design",
       description: "A comprehensive Web design for the Real time emotion Analyst Application.",
       tags: ["Figma", "UI/UX"],
@@ -89,7 +99,7 @@ const Projects = () => {
       category: "UI/UX Design"
     },
     {
-      id: 9,
+      id: 10,
       title: "ANN Application",
       description: "Customer Churn Prediction App using Tensorflow and Python",
       tags: ["Python", "Tensorflow", "Streamlit"],
@@ -99,7 +109,7 @@ const Projects = () => {
       category: "AI Applications"
     },
     {
-      id: 10,
+      id: 11,
       title: "SummariBot",
       description: "Document Summarization and Interactive Chatbot Application",
       tags: ["Python", "HF Inference", "Streamlit", "Groq AI"],
@@ -109,7 +119,7 @@ const Projects = () => {
       category: "AI Applications"
     },
     {
-      id: 11,
+      id: 12,
       title: "MentAI Learning Assistant",
       description: "An interactive application assist with learning Data Science and Full Stack Development.",
       tags: ["Python", "Groq AI", "Streamlit"],
@@ -119,7 +129,7 @@ const Projects = () => {
       category: "AI Applications"
     },
     {
-      id: 12,
+      id: 13,
       title: "RoBERT PD Model",
       description: "Robust Paraphrase Detection RoBERT Transformer Model",
       tags: ["HF Transformer", "Transfomer Architecture", "NLP"],
@@ -129,7 +139,7 @@ const Projects = () => {
       category: "AI Models"
     },
     {
-      id: 13,
+      id: 14,
       title: "BERT PD Model",
       description: "Robust Paraphrase Detection BERT Transformer Model",
       tags: ["HF Transformer", "Transfomer Architecture", "NLP"],
@@ -139,7 +149,7 @@ const Projects = () => {
       category: "AI Models"
     },
     {
-      id: 14,
+      id: 15,
       title: "MPNet PD Model",
       description: "Robust Paraphrase Detection MPNet Transformer Model",
       tags: ["HF Transformer", "Transfomer Architecture", "NLP"],
@@ -149,7 +159,7 @@ const Projects = () => {
       category: "AI Models"
     },
     {
-      id: 15,
+      id: 16,
       title: "Tamil BERT",
       description: "Specifically Trained BERT model for Tamil",
       tags: ["HF Transformer", "Transfomer Architecture", "NLP"],
