@@ -124,7 +124,7 @@ export default function AboutSection() {
                   </div>
                   <div>
                     <h3 className="font-display font-medium text-lg mb-2">My Mission</h3>
-                    <p className="text-gray-600 dark:text-gray-400">My mission is to bridge AI development with real-world applications, ensuring that AI models are not just theoretical but are optimized for production, scalability, and efficiency. Through continuous learning, hands-on development, and AI product innovation, I strive to push the boundaries of AI application development and contribute to the next generation of intelligent systems.<br>At the same time, I am committed to transforming Tamil AI from a research focus into scalable, enterprise-ready solutions—developing AI-driven products that empower businesses and communities by making low-resource language AI as powerful and adaptable as mainstream AI systems.</p>
+                    <p className="text-gray-600 dark:text-gray-400">My mission is to bridge AI development with real-world applications, ensuring that AI models are not just theoretical but are optimized for production, scalability, and efficiency. Through continuous learning, hands-on development, and AI product innovation, I strive to push the boundaries of AI application development and contribute to the next generation of intelligent systems.<br>At the same time, I am committed to transforming Tamil AI from a research focus into scalable, enterprise-ready solutions developing AI-driven products that empower businesses and communities by making low-resource language AI as powerful and adaptable as mainstream AI systems.</p>
                   </div>
                 </motion.div>
               </div>
