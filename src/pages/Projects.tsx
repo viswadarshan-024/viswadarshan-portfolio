@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Folder, Tag } from "lucide-react";
@@ -8,14 +9,14 @@ const Projects = () => {
   const [filteredProjects, setFilteredProjects] = useState<any[]>([]);
   const [isLoaded, setIsLoaded] = useState(false);
 
-  // Sample project data with updated unique images
+  // Sample project data with updated project-relevant images
   const allProjects = [
     {
       id: 1,
       title: "திருக்குறள் AI",
       description: "AI-agentic application that retrieves exact Tamil Kurals based on user queries ensuring precise and efficient results through an agentic workflow.",
       tags: ["FAISS", "Llama 2", "Sentence Transformer", "Python", "Streamlit"],
-      image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b",
+      image: "https://images.unsplash.com/photo-1629654297299-c8506221ca97",
       demoLink: "https://kural-ai.streamlit.app/",
       githubLink: "https://github.com/viswadarshan-024/Thirukkural-AI",
       category: "AI Application"
@@ -25,7 +26,7 @@ const Projects = () => {
       title: "AI Search Assistant",
       description: "An AI-powered search assistant that performs Google searches and delivers relevant results with intelligent responses.",
       tags: ["Streamlit", "Groq AI", "Google Search Engine"],
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31",
       demoLink: "https://ai-search-assistant.streamlit.app/",
       githubLink: "https://github.com/viswadarshan-024/Search-AI",
       category: "AI Applications"
@@ -35,7 +36,7 @@ const Projects = () => {
       title: "Portfolio Website",
       description: "A minimalist portfolio for a AI Developer showcasing their work with elegant animations.",
       tags: ["Next.js", "Tailwind CSS", "Framer Motion", "Typescript"],
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+      image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8",
       demoLink: "#",
       githubLink: "https://github.com/viswadarshan-024/innovative-portfolio-spark",
       category: "UI/UX Design"
@@ -45,7 +46,7 @@ const Projects = () => {
       title: "Image Sim AI",
       description: "This application measures the similarity between two images using various computer vision techniques.",
       tags: ["OpenCV", "Streamlit", "SciPy"],
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
+      image: "https://images.unsplash.com/photo-1561518776-e76a5e48f731",
       demoLink: "https://simageai.streamlit.app/",
       category: "AI Models"
     },
@@ -54,7 +55,7 @@ const Projects = () => {
       title: "Personal Chatbot",
       description: "Personal Chatbot with Multi-Session Management seamlessly.",
       tags: ["Langchain", "Groq AI", "Streamlit"],
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475",
+      image: "https://images.unsplash.com/photo-1673159929167-10cd559a4979",
       demoLink: "https://my-personalchatbot.streamlit.app/",
       githubLink: "https://github.com/viswadarshan-024/personal_chatbot",
       category: "AI Applications"
@@ -64,7 +65,7 @@ const Projects = () => {
       title: "Multilingual LLM Translator",
       description: "The application allows users to translate text into a variety of target languages effortlessly.",
       tags: ["Python", "Groq AI", "Langchain"],
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
+      image: "https://images.unsplash.com/photo-1526040652367-ac003a0475fe",
       demoLink: "https://llm-translation-app.streamlit.app/",
       githubLink: "https://github.com/viswadarshan-024/llm-translation-app",
       category: "AI Applications"
@@ -74,7 +75,7 @@ const Projects = () => {
       title: "QR Code Payment App",
       description: "A bus commuting system designed to simplify fare payments and provide seamless travel experiences for passengers.",
       tags: ["Android Studio", "MySQL", "RazorPay Payment System"],
-      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3",
+      image: "https://images.unsplash.com/photo-1616077168079-7e09a677fb2c",
       demoLink: "https://drive.google.com/file/d/1QKM7-FQhRU4DKaTkcFBjIXYa8HIoSoq1/view",
       category: "Mobile Apps"
     },
@@ -83,7 +84,7 @@ const Projects = () => {
       title: "Taplyf App",
       description: "A comprehensive design of NFC Fair Payment Application by Taplyf.",
       tags: ["Figma", "UI/UX"],
-      image: "https://images.unsplash.com/photo-1561070791-2526d30994b5",
+      image: "https://images.unsplash.com/photo-1573867639040-6dd25fa5f597",
       demoLink: "https://www.figma.com/proto/iO2Pc6HYz20uuE5SBNoHoo/Taplyf-Application-Prototype?node-id=0-1886&starting-point-node-id=0%3A1886&t=ypo3nS170aymxxYW-1",
       githubLink: "https://github.com/viswadarshan-024/Taplyf-App",
       category: "UI/UX Design"
@@ -93,7 +94,7 @@ const Projects = () => {
       title: "Magnus Webpage Design",
       description: "A comprehensive Web design for the Real time emotion Analyst Application.",
       tags: ["Figma", "UI/UX"],
-      image: "https://images.unsplash.com/photo-1558655146-6c222b05fce4",
+      image: "https://images.unsplash.com/photo-1559028012-481c04fa702d",
       demoLink: "https://www.figma.com/proto/dymWu6ONkz0WIigsubfYyi/Magnus-Web-Page?node-id=34-2&starting-point-node-id=34%3A2&scaling=scale-down-width&content-scaling=fixed",
       githubLink: "https://github.com/viswadarshan-024/Magnus-webdesign",
       category: "UI/UX Design"
@@ -103,7 +104,7 @@ const Projects = () => {
       title: "ANN Application",
       description: "Customer Churn Prediction App using Tensorflow and Python",
       tags: ["Python", "Tensorflow", "Streamlit"],
-      image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
       demoLink: "https://ann-predict-application.streamlit.app/",
       githubLink: "https://github.com/viswadarshan-024/DL-ANN-application",
       category: "AI Applications"
@@ -113,7 +114,7 @@ const Projects = () => {
       title: "SummariBot",
       description: "Document Summarization and Interactive Chatbot Application",
       tags: ["Python", "HF Inference", "Streamlit", "Groq AI"],
-      image: "https://images.unsplash.com/photo-1589149098258-3e9102cd63d3",
+      image: "https://images.unsplash.com/photo-1597733336794-12d05021d510",
       demoLink: "https://ann-predict-application.streamlit.app/",
       githubLink: "https://github.com/viswadarshan-024/DL-ANN-application",
       category: "AI Applications"
@@ -133,7 +134,7 @@ const Projects = () => {
       title: "RoBERT PD Model",
       description: "Robust Paraphrase Detection RoBERT Transformer Model",
       tags: ["HF Transformer", "Transfomer Architecture", "NLP"],
-      image: "https://images.unsplash.com/photo-1468436139062-f60a71c5c892",
+      image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb",
       demoLink: "https://huggingface.co/viswadarshan06/pd-robert",
       githubLink: "https://github.com/viswadarshan-024/pd-robert",
       category: "AI Models"
@@ -143,7 +144,7 @@ const Projects = () => {
       title: "BERT PD Model",
       description: "Robust Paraphrase Detection BERT Transformer Model",
       tags: ["HF Transformer", "Transfomer Architecture", "NLP"],
-      image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5",
+      image: "https://images.unsplash.com/photo-1642681718639-1e172cd3e0cf",
       demoLink: "https://huggingface.co/viswadarshan06/pd-bert",
       githubLink: "https://github.com/viswadarshan-024/pd-bert",
       category: "AI Models"
@@ -153,7 +154,7 @@ const Projects = () => {
       title: "MPNet PD Model",
       description: "Robust Paraphrase Detection MPNet Transformer Model",
       tags: ["HF Transformer", "Transfomer Architecture", "NLP"],
-      image: "https://images.unsplash.com/photo-1509718443690-d8e2fb3474b7",
+      image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485",
       demoLink: "https://huggingface.co/viswadarshan06/pd-mpnet",
       githubLink: "https://github.com/viswadarshan-024/pd-mpnet",
       category: "AI Models"
@@ -163,7 +164,7 @@ const Projects = () => {
       title: "Tamil BERT",
       description: "Specifically Trained BERT model for Tamil",
       tags: ["HF Transformer", "Transfomer Architecture", "NLP"],
-      image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485",
+      image: "https://images.unsplash.com/photo-1629654297299-c8506221ca97",
       demoLink: "https://huggingface.co/viswadarshan06/Tamil-MLM",
       category: "AI Models"
     }

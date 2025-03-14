@@ -15,9 +15,9 @@ export default function ProjectsSection() {
     // Preload project images for better performance
     const preloadImages = () => {
       const imagesToPreload = [
-        "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-        "https://images.unsplash.com/photo-1550751827-4bd374c3f58b",
-        "https://images.unsplash.com/photo-1673179874596-1b27a1883dab"
+        "https://images.unsplash.com/photo-1558494949-ef010cbdcc31",
+        "https://images.unsplash.com/photo-1629654297299-c8506221ca97",
+        "https://images.unsplash.com/photo-1561518776-e76a5e48f731"
       ];
       
       imagesToPreload.forEach(src => {
@@ -29,13 +29,13 @@ export default function ProjectsSection() {
     preloadImages();
   }, []);
   
-  // Only show these 3 specific projects in home page
+  // Only show these 3 specific projects in home page with relevant images
   const projects = [
     {
       title: "AI Search Assistant",
       description: "An AI-powered search assistant that performs Google searches and delivers relevant results with intelligent responses.",
       tags: ["Streamlit", "Groq AI", "Google Search Engine"],
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31",
       demoLink: "https://ai-search-assistant.streamlit.app/",
       githubLink: "https://github.com/viswadarshan-024/Search-AI",
       category: "AI Applications"
@@ -44,7 +44,7 @@ export default function ProjectsSection() {
       title: "திருக்குறள் AI",
       description: "AI-agentic application that retrieves exact Tamil Kurals based on user queries ensuring precise and efficient results through an agentic workflow.",
       tags: ["FAISS", "Llama 2", "Sentence Transformer", "Python", "Streamlit"],
-      image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b",
+      image: "https://images.unsplash.com/photo-1629654297299-c8506221ca97",
       demoLink: "https://kural-ai.streamlit.app/",
       githubLink: "https://github.com/viswadarshan-024/Thirukkural-AI",
       category: "AI Application"
@@ -53,7 +53,7 @@ export default function ProjectsSection() {
       title: "Image Sim AI",
       description: "This application measures the similarity between two images using various computer vision techniques.",
       tags: ["OpenCV", "Streamlit", "SciPy"],
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
+      image: "https://images.unsplash.com/photo-1561518776-e76a5e48f731",
       demoLink: "https://simageai.streamlit.app/",
       githubLink: "https://github.com/viswadarshan-024/image-similarity-ai",
       category: "AI Models"
