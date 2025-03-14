@@ -94,10 +94,10 @@ const About = () => {
               <div className="w-full md:w-2/3">
                 <h2 className="text-2xl font-display font-semibold mb-4">My Story</h2>
                 <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  I am a pre-final year B.Tech student in Computer Science and Business Systems, specializing in Natural Language Processing (NLP), Generative AI, and AI system development. My expertise lies in low-resource language processing, LLM fine-tuning, tokenization, and scalable AI deployment.
+                  I am a pre-final year B.Tech student in Computer Science and Business Systems, specializing in Natural Language Processing (NLP), Generative AI, and AI system development. My expertise lies in building AI-driven applications, including LLM fine-tuning, autonomous AI agents, and specialized AI solutions for business use cases.
                 </p>
                 <p className="text-gray-600 dark:text-gray-400">
-                  I actively work on AI research and real-world applications, including multilingual chatbots, AI-driven learning platforms, and storytelling AI. With a deep technical focus, I build efficient and high-performing AI models while continuously exploring new advancements in the field.
+                  I focus on developing scalable AI products, from custom NLP models to autonomous AI systems that integrate seamlessly into real-world applications. My work spans multilingual AI, intelligent automation, and RAG-based AI solutions, ensuring AI is not just powerful but also practical for business and enterprise needs.
                 </p>
               </div>
             </div>
