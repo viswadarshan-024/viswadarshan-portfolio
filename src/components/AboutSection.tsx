@@ -190,7 +190,7 @@ import { motion } from "framer-motion";
 import { Award, BookOpen, Briefcase, Cpu, Heart, Target } from "lucide-react";
 
 export default function AboutSection() {
-  const skills = ["Python", "Natural Language Processing", "Generative AI", "Deep Learning", "Machine Learning", "Android Studio", "Java", "Team Leadership", "Generative AI", "Experimentation", "AI Model Benchmarking", "Software Engineering", "Agentic AI"];
+  const skills = ["Python", "Natural Language Processing", "Generative AI", "Deep Learning", "Machine Learning", "Android Studio", "Java", "Team Leadership", "Experimentation", "AI Model Benchmarking", "Software Engineering", "Agentic AI"];
 
   const fadeInUpVariants = {
     hidden: {
@@ -273,11 +273,11 @@ export default function AboutSection() {
             </motion.h2>
             
             <motion.p className="text-gray-600 dark:text-gray-400 mb-6" variants={fadeInUpVariants}>
-              I am a pre-final year B.Tech student in Computer Science and Business Systems, specializing in Natural Language Processing and AI development. My focus is on developing scalable AI products, from custom NLP models to autonomous AI systems that integrate seamlessly into real-world applications. My work spans multilingual AI, intelligent automation, and AI-driven insights.
+              I am a pre-final year B.Tech student, with a passion for Generative AI, Natural Language Processing (NLP), and AI system development. I focus on building practical, scalable AI applications, including LLM fine-tuning, autonomous AI agents, and custom solutions designed for real-world business needs.
             </motion.p>
             
             <motion.p className="text-gray-600 dark:text-gray-400 mb-8" variants={fadeInUpVariants} transition={{ delay: 0.1 }}>
-              I focus on developing scalable AI products, from custom NLP models to autonomous AI systems that integrate seamlessly into real-world applications. My work spans multilingual AI, intelligent automation, and AI-driven insights.
+              My work spans multilingual AI systems, from custom NLP models to RAG-based applications that integrate seamlessly into real-world environments. I aim to bridge the gap between advanced AI capabilities and practical impact, ensuring that the solutions I build are not only powerful but also truly useful and accessible.
             </motion.p>
 
             {/* Passion & Mission Section */}
