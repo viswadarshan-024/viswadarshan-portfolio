@@ -190,7 +190,7 @@ import { motion } from "framer-motion";
 import { Award, BookOpen, Briefcase, Cpu, Heart, Target } from "lucide-react";
 
 export default function AboutSection() {
-  const skills = ["Python", "Natural Language Processing", "Generative AI", "Deep Learning", "Machine Learning", "Android Studio", "Java", "Team Leadership", "Generative AI", "Experimentation", "AI Modeling"];
+  const skills = ["Python", "Natural Language Processing", "Generative AI", "Deep Learning", "Machine Learning", "Android Studio", "Java", "Team Leadership", "Generative AI", "Experimentation", "AI Model Benchmarking", "Software Engineering", "Agentic AI"];
 
   const fadeInUpVariants = {
     hidden: {
