@@ -289,7 +289,7 @@ export default function AboutSection() {
                   </div>
                   <div>
                     <h3 className="font-display font-medium text-lg mb-2">My Passion</h3>
-                    <p className="text-gray-600 dark:text-gray-400">I am deeply passionate about building AI solutions that drive real-world impact. My focus is on developing domain-specific LLMs, enterprise-grade AI tools, and innovative AI-driven products.</p>
+                    <p className="text-gray-600 dark:text-gray-400">I am deeply passionate about building AI solutions that create tangible impact. My focus lies in developing domain-specific LLMs, autonomous AI systems, and enterprise-grade NLP tools that solve real-world problems with precision, scalability, and innovation. I thrive on transforming complex ideas into intelligent, user-centric AI products that drive value across industries and communities.</p>
                   </div>
                 </motion.div>
                 
@@ -300,10 +300,7 @@ export default function AboutSection() {
                   <div>
                     <h3 className="font-display font-medium text-lg mb-2">My Mission</h3>
                     <p className="text-gray-600 dark:text-gray-400">
-                      My mission is to bridge AI development with real-world applications, ensuring that AI models are not just theoretical but are optimized for production, scalability, and efficiency. Through continuous learning, hands-on development, and AI product innovation, I strive to push the boundaries of AI application development and contribute to the next generation of intelligent systems.
-                      <br />
-                      At the same time, I am committed to transforming Tamil AI from a research focus into scalable, enterprise-ready solutions developing AI-driven products that empower businesses and communities by making low-resource language AI as powerful and adaptable as mainstream AI systems.
-                    </p>
+                      My mission is to bridge AI development with real-world applications, ensuring models are production-ready, efficient, and scalable. I aim to drive AI product innovation through continuous learning and hands-on development, while also advancing Tamil AI for real-world use, elevating it from a research concept to enterprise-ready, impactful solutions. I strive to make low-resource language AI as powerful and adaptable as global systems, enabling broader access and meaningful change.</p>
                   </div>
                 </motion.div>
               </div>
