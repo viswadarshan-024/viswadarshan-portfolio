@@ -149,7 +149,7 @@ export default function HeroSection() {
 
 
 
-        <motion.p variants={itemVariants} className="max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-400 mb-8">I'm an AI Developer & Researcher specializing in NLP, Generative AI, focusing on building efficient, scalable, and impactful AI solutions. Let's innovate and push the boundaries of AI together!</motion.p>
+        <motion.p variants={itemVariants} className="max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-400 mb-8">I’m an AI developer passionate about NLP and Generative AI, focused on building scalable, efficient, and real-world AI solutions. I enjoy turning complex ideas into practical tools with purpose and precision. Let’s innovate and push the boundaries of AI together!</motion.p>
 
         <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <motion.div whileHover={{
