@@ -135,7 +135,7 @@ export default function HeroSection() {
   </motion.span>
 </motion.h1>
 
-<motion.h2 
+<motion.h3 
   variants={itemVariants} 
   className="text-3xl md:text-4xl lg:text-6xl font-medium tracking-tight mb-6 font-merriweather text-gray-800 dark:text-gray-200"
 >
@@ -145,7 +145,7 @@ export default function HeroSection() {
   <motion.span className="block mt-2" whileHover={{ scale: 1.01 }}>
     Solutions with Innovation & Precision
   </motion.span>
-</motion.h2>
+</motion.h3>
 
 
 
