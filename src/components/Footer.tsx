@@ -57,6 +57,14 @@ export default function Footer() {
                   About
                 </Link>
               </li>
+              <Link 
+                  to="/research" 
+                  className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group"
+                >
+                  <span className="w-0 h-[1px] bg-white group-hover:w-3 transition-all duration-300 mr-0 group-hover:mr-2"></span>
+                  Research
+                </Link>
+              </li>
               <li>
                 <Link 
                   to="/projects" 
@@ -64,6 +72,15 @@ export default function Footer() {
                 >
                   <span className="w-0 h-[1px] bg-white group-hover:w-3 transition-all duration-300 mr-0 group-hover:mr-2"></span>
                   Projects
+                </Link>
+              </li>
+              </li>
+              <Link 
+                  to="/blog" 
+                  className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group"
+                >
+                  <span className="w-0 h-[1px] bg-white group-hover:w-3 transition-all duration-300 mr-0 group-hover:mr-2"></span>
+                  Blog
                 </Link>
               </li>
               <li>
@@ -115,7 +132,7 @@ export default function Footer() {
                 <span className="bg-gray-800 p-2 rounded-lg mr-3 group-hover:bg-gray-700 transition-colors">
                   <Twitter size={18} />
                 </span>
-                Twitter
+                X
               </a>
               
               <a 
