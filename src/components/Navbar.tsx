@@ -17,7 +17,6 @@ export default function Navbar() {
     { name: "Projects", path: "/projects" },
     { name: "Blogs", path: "/blog" }
     { name: "Contact", path: "/contact" }
-    
   ];
 
   useEffect(() => {
