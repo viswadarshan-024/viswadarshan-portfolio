@@ -1,13 +1,12 @@
-
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import ContactSection from "@/components/ContactSection";
-// import ResearchSection from "@/components/ResearchSection";
+import ResearchSection from "@/components/ResearchSection";
+import BlogsSection from "@/components/BlogsSection";
 // import TestimonialsSection from "@/components/TestimonialsSection";
-// import BlogsSection from "@/components/BlogsSection";
 // import CodeSnippetsSection from "@/components/CodeSnippetsSection";
 
 const Index = () => {
@@ -88,7 +87,6 @@ const Index = () => {
         <AboutSection />
       </motion.div>
       
-      {/* Research section temporarily removed
       <motion.div 
         variants={sectionVariants}
         initial="initial"
@@ -97,7 +95,6 @@ const Index = () => {
       >
         <ResearchSection />
       </motion.div>
-      */}
       
       <motion.div 
         variants={sectionVariants}
@@ -106,6 +103,15 @@ const Index = () => {
         viewport={{ once: true, amount: 0.2 }}
       >
         <ProjectsSection />
+      </motion.div>
+      
+      <motion.div 
+        variants={sectionVariants}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <BlogsSection />
       </motion.div>
       
       <motion.div 
@@ -125,15 +131,6 @@ const Index = () => {
         viewport={{ once: true, amount: 0.2 }}
       >
         <TestimonialsSection />
-      </motion.div>
-      
-      <motion.div 
-        variants={sectionVariants}
-        initial="initial"
-        whileInView="animate"
-        viewport={{ once: true, amount: 0.2 }}
-      >
-        <BlogsSection />
       </motion.div>
       
       <motion.div 
