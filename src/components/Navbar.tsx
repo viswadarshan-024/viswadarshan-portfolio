@@ -1,4 +1,5 @@
 
+
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
@@ -33,7 +34,7 @@ export default function Navbar() {
 
   return (
     <header 
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 select-none ${
         isScrolled 
           ? "bg-gray-900/80 backdrop-blur-md py-3 shadow-md" 
           : "bg-transparent py-5"

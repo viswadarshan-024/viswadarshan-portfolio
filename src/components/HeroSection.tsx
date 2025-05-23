@@ -1,8 +1,8 @@
+
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { ArrowDown } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { ArrowRight, Github, Linkedin, FileText, Code, Bot, MessageSquare } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 export default function HeroSection() {
@@ -52,29 +52,7 @@ export default function HeroSection() {
     }
   };
   
-  const floatingVariants = {
-    initial: {
-      y: 0
-    },
-    animate: {
-      y: [-5, 5, -5],
-      transition: {
-        duration: 3,
-        repeat: Infinity,
-        repeatType: "loop" as const,
-        ease: "easeInOut"
-      }
-    }
-  };
-  
-  const scrollToNext = () => {
-    const nextSection = document.getElementById("about-section");
-    if (nextSection) {
-      nextSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-  
-  return <section className="relative min-h-screen flex items-center justify-center py-20 overflow-hidden">
+  return <section className="relative min-h-screen flex items-center justify-center py-20 overflow-hidden select-none">
       <div className="absolute inset-0 pointer-events-none">
         <div className="mask-radial-faded absolute inset-0 bg-grid-small-black/[0.03] dark:bg-grid-small-white/[0.03]" />
       </div>
@@ -146,8 +124,6 @@ export default function HeroSection() {
     Solutions with Innovation & Precision
   </motion.span>
 </motion.h4>
-
-
 
         <motion.p variants={itemVariants} className="max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-400 mb-8">I turn ideas into meaningful solutions, driven by curiosity, purpose, and a passion for building what matters.</motion.p>
 
@@ -294,30 +270,6 @@ export default function HeroSection() {
             <span>WhatsApp</span>
           </motion.a>
         </div>
-
-        <motion.div 
-          className="absolute bottom-12 left-1/2 transform -translate-x-1/2"
-          initial="initial"
-          animate="animate"
-          variants={floatingVariants}
-        >
-          <motion.div 
-            whileHover={{ scale: 1.2 }}
-            whileTap={{ scale: 0.9 }}
-            className="flex flex-col items-center gap-2"
-          >
-            <span className="text-sm text-gray-500 dark:text-gray-400">Scroll Down</span>
-            <Button 
-              variant="ghost" 
-              size="icon" 
-              onClick={scrollToNext} 
-              aria-label="Scroll to next section"
-              className="h-10 w-10 rounded-full bg-white/20 dark:bg-gray-800/30 backdrop-blur-sm"
-            >
-              <ArrowDown className="h-5 w-5" />
-            </Button>
-          </motion.div>
-        </motion.div>
       </motion.div>
     </section>;
 }
