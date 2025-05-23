@@ -16,7 +16,7 @@ const Projects = () => {
       title: "திருக்குறள் AI",
       description: "AI-agentic application that retrieves exact Tamil Kurals based on user queries ensuring precise and efficient results through an agentic workflow.",
       tags: ["FAISS", "Llama 2", "Sentence Transformer", "Python", "Streamlit"],
-      image: "https://images.unsplash.com/photo-1629654297299-c8506221ca97",
+      image: "thumb_1200_676.png",
       demoLink: "https://kural-ai.streamlit.app/",
       githubLink: "https://github.com/viswadarshan-024/Thirukkural-AI",
       category: "AI Application"
@@ -26,7 +26,7 @@ const Projects = () => {
       title: "AI Search Assistant",
       description: "An AI-powered search assistant that performs Google searches and delivers relevant results with intelligent responses.",
       tags: ["Streamlit", "Groq AI", "Google Search Engine"],
-      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31",
+      image: "R.jpg",
       demoLink: "https://ai-search-assistant.streamlit.app/",
       githubLink: "https://github.com/viswadarshan-024/Search-AI",
       category: "AI Applications"
@@ -46,7 +46,7 @@ const Projects = () => {
       title: "Image Sim AI",
       description: "This application measures the similarity between two images using various computer vision techniques.",
       tags: ["OpenCV", "Streamlit", "SciPy"],
-      image: "https://images.unsplash.com/photo-1561518776-e76a5e48f731",
+      image: "Research_Fellowship_in_AI_pillars.jpg",
       demoLink: "https://simageai.streamlit.app/",
       category: "AI Models"
     },
