@@ -1,33 +1,33 @@
-
 import { motion } from "framer-motion";
-import { BookText, Link, Calendar, ArrowUpRight } from "lucide-react";
+import { BookText, Calendar, ArrowUpRight, ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
+import { Link } from "react-router-dom";
+
 export default function ResearchSection() {
-  const researches = [{
-    title: "Enhancing Masked Word Prediction in Tamil Language Models: A Synergistic Aproach Using BERT and SBERT",
-    journal: "ICON Conference - ACL Anthology",
-    date: "December 2024",
-    abstract: "This research explores the challenges of masked word prediction and sentence-level semantic analysis in Tamil NLP, leveraging a synergistic combination of BERT and SBERT.",
-    link: "https://aclanthology.org/2024.icon-1.55/"
-  }, {
-    title: "Comparative Insights into Modern Architectures for Paraphrase Detection",
-    journal: "ICCIDS Conference - Springer IFIP AICT",
-    date: "February 2025",
-    abstract: "A comprehensive comparison of Transformer-based BERT models for paraphrase detection, demonstrating their strengths and trade-offs.",
-    link: ""
-  }, {
-    title: "Optimizing Tamil Tokenizers: The Limits of Pretrained Models",
-    journal: "ICTACT Journals",
-    date: "May 2025",
-    abstract: "This paper examines how implementing Tamil tokenizers from scratch for domain and task specific datasets.",
-    link: ""
-  }, {
-    title: "XLNet meets paraphrase detection",
-    journal: "ICTACT Journals",
-    date: "May 2025",
-    abstract: "This paper fine-tunes XLNet for paraphrase detection on MRPC, achieving strong benchmark-level performance.",
-    link: ""
-  }];
+  const researches = [
+    {
+      title: "Enhancing Masked Word Prediction in Tamil Language Models: A Synergistic Aproach Using BERT and SBERT",
+      journal: "ICON Conference - ACL Anthology",
+      date: "December 2024",
+      abstract: "This research explores the challenges of masked word prediction and sentence-level semantic analysis in Tamil NLP, leveraging a synergistic combination of BERT and SBERT.",
+      link: "https://aclanthology.org/2024.icon-1.55/"
+    },
+    {
+      title: "Comparative Insights into Modern Architectures for Paraphrase Detection",
+      journal: "ICCIDS Conference - Springer IFIP AICT",
+      date: "February 2025",
+      abstract: "A comprehensive comparison of Transformer-based BERT models for paraphrase detection, demonstrating their strengths and trade-offs.",
+      link: ""
+    },
+    {
+      title: "Optimizing Tamil Tokenizers: The Limits of Pretrained Models",
+      journal: "ICTACT Journals",
+      date: "May 2025",
+      abstract: "This paper examines how implementing Tamil tokenizers from scratch for domain and task specific datasets.",
+      link: ""
+    }
+  ];
+
   const containerVariants = {
     hidden: {
       opacity: 0
@@ -52,7 +52,9 @@ export default function ResearchSection() {
       }
     }
   };
-  return <section id="research-section" className="py-20 bg-white dark:bg-gray-950 select-none">
+
+  return (
+    <section id="research-section" className="py-20 bg-white dark:bg-gray-950 select-none">
       <div className="container mx-auto px-4 md:px-6">
         <motion.div initial={{
         opacity: 0,
@@ -81,11 +83,15 @@ export default function ResearchSection() {
           <p className="max-w-2xl mx-auto text-gray-600 dark:text-gray-400">Exploring the AI technology and Language Processing through academic research and industry applications.</p>
         </motion.div>
 
-        <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{
-        once: true,
-        amount: 0.2
-      }} className="grid grid-cols-1 gap-8">
-          {researches.map((research, index) => <motion.div key={index} variants={itemVariants} className="bg-gray-50 dark:bg-gray-900 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300">
+        <motion.div 
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          className="grid grid-cols-1 gap-8"
+        >
+          {researches.map((research, index) => (
+            <motion.div key={index} variants={itemVariants} className="bg-gray-50 dark:bg-gray-900 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300">
               <div className="p-6">
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center space-x-2">
@@ -118,8 +124,19 @@ export default function ResearchSection() {
                   </Button>
                 </div>
               </div>
-            </motion.div>)}
+            </motion.div>
+          ))}
         </motion.div>
+
+        <div className="flex justify-center mt-12">
+          <Button asChild variant="outline" className="group">
+            <Link to="/research">
+              View All Publications
+              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </Button>
+        </div>
       </div>
-    </section>;
+    </section>
+  );
 }

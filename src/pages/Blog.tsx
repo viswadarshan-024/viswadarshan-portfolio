@@ -1,9 +1,14 @@
+
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Calendar, Clock, Tag, ArrowRight } from "lucide-react";
-import { Button } from "./ui/button";
-import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
-export default function BlogsSection() {
+const Blog = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const blogs = [
     {
       title: "Fine-Tuning BERT for Paraphrase Detection: A Step-by-Step Guide",
@@ -47,27 +52,26 @@ export default function BlogsSection() {
   };
 
   return (
-    <section id="blogs-section" className="py-20 bg-gray-50 dark:bg-gray-900">
+    <div className="min-h-screen py-20 bg-gray-950 select-none">
       <div className="container mx-auto px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-display font-semibold mb-4 relative">
+          <h1 className="text-4xl md:text-5xl font-display font-semibold mb-6 relative">
             <span className="relative inline-block">
               Latest Blog Posts
               <motion.span 
                 className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-primary/60 to-primary/30 rounded-full"
                 initial={{ width: 0 }}
-                whileInView={{ width: "100%" }}
+                animate={{ width: "100%" }}
                 transition={{ duration: 0.8, delay: 0.3 }}
               />
             </span>
-          </h2>
-          <p className="max-w-2xl mx-auto text-gray-600 dark:text-gray-400">
+          </h1>
+          <p className="max-w-3xl mx-auto text-lg text-gray-400">
             Insights, tutorials, and thoughts on design, development, and emerging technologies.
           </p>
         </motion.div>
@@ -75,15 +79,14 @@ export default function BlogsSection() {
         <motion.div 
           variants={containerVariants}
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-8"
+          animate="visible"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {blogs.map((blog, index) => (
             <motion.article
               key={index}
               variants={itemVariants}
-              className="bg-white dark:bg-gray-950 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col h-full"
+              className="bg-gray-900 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col h-full"
               whileHover={{ y: -5 }}
             >
               <div className="relative aspect-[16/9] overflow-hidden">
@@ -98,18 +101,18 @@ export default function BlogsSection() {
               <div className="p-6 flex flex-col flex-grow">
                 <div className="flex flex-wrap gap-2 mb-3">
                   {blog.tags.map((tag, i) => (
-                    <div key={i} className="flex items-center text-xs bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 px-2 py-1 rounded-full">
+                    <div key={i} className="flex items-center text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">
                       <Tag className="w-3 h-3 mr-1" />
                       {tag}
                     </div>
                   ))}
                 </div>
                 
-                <h3 className="text-xl font-display font-semibold mb-3">{blog.title}</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4 flex-grow">{blog.excerpt}</p>
+                <h2 className="text-xl font-display font-semibold mb-3 text-white">{blog.title}</h2>
+                <p className="text-gray-400 mb-4 flex-grow">{blog.excerpt}</p>
                 
                 <div className="mt-auto">
-                  <div className="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400 mb-4">
+                  <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
                     <div className="flex items-center">
                       <Calendar className="w-4 h-4 mr-1" />
                       <span>{blog.date}</span>
@@ -137,16 +140,9 @@ export default function BlogsSection() {
             </motion.article>
           ))}
         </motion.div>
-
-        <div className="flex justify-center mt-12">
-          <Button asChild variant="outline" className="group">
-            <Link to="/blog">
-              View All Blog Posts
-              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </Button>
-        </div>
       </div>
-    </section>
+    </div>
   );
-}
+};
+
+export default Blog;
