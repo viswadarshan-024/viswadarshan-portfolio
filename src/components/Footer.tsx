@@ -30,7 +30,7 @@ export default function Footer() {
               Building with a deep commitment to innovation, language technology, and advancing AI.
             </p>
             <div className="pt-2">
-              <p className="text-sm text-gray-500">© {currentYear} Portfolio. All rights reserved.</p>
+              <p className="text-sm text-gray-500">© {currentYear} Portfolio. Built with code, coffee & curiosity.</p>
             </div>
           </div>
           
