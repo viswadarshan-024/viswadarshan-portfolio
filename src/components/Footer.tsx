@@ -27,7 +27,7 @@ export default function Footer() {
               <div className="ml-2 h-1 w-1 rounded-full bg-primary animate-pulse"></div>
             </Link>
             <p className="text-gray-400 max-w-md">
-              Building innovative digital experiences with a focus on clean design and powerful functionality. Let's create something amazing together.
+              Building with a deep commitment to innovation, language technology, and advancing AI.
             </p>
             <div className="pt-2">
               <p className="text-sm text-gray-500">© {currentYear} Portfolio. All rights reserved.</p>
