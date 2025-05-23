@@ -65,7 +65,7 @@ export default {
 				}
 			},
 			fontFamily: {
-				sans: ['Inter var', 'sans-serif'],
+				sans: ['Lexend var', 'sans-serif'],
 				display: ['Poppins', 'sans-serif'],
 			},
 			borderRadius: {
