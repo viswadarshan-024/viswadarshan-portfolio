@@ -111,16 +111,6 @@ const Projects = () => {
     },
     {
       id: 11,
-      title: "BERT PD Model",
-      description: "Robust Paraphrase Detection BERT Transformer Model",
-      tags: ["HF Transformer", "Transfomer Architecture", "NLP"],
-      image: "https://images.unsplash.com/photo-1642681718639-1e172cd3e0cf",
-      demoLink: "https://huggingface.co/viswadarshan06/pd-bert",
-      githubLink: "https://github.com/viswadarshan-024/pd-bert",
-      category: "AI Models"
-    },
-    {
-      id: 12,
       title: "MPNet PD Model",
       description: "Robust Paraphrase Detection MPNet Transformer Model",
       tags: ["HF Transformer", "Transfomer Architecture", "NLP"],
@@ -130,7 +120,7 @@ const Projects = () => {
       category: "AI Models"
     },
     {
-      id: 13,
+      id: 12,
       title: "Tamil BERT",
       description: "Specifically Trained BERT model for Tamil",
       tags: ["HF Transformer", "Transfomer Architecture", "NLP"],
