@@ -13,12 +13,18 @@ export default function ResearchSection() {
     journal: "ICCIDS Conference - Springer IFIP AICT",
     date: "February 2025",
     abstract: "A comprehensive comparison of Transformer-based BERT models for paraphrase detection, demonstrating their strengths and trade-offs.",
-    link: "https://drive.google.com/file/d/174_vOMRxlA_HLvINV_2F8Z4IMC6YQG9u/view"
+    link: ""
   }, {
     title: "Optimizing Tamil Tokenizers: The Limits of Pretrained Models",
-    journal: "National Level Research Conclave 2025",
-    date: "February 2025",
+    journal: "ICTACT Journals",
+    date: "May 2025",
     abstract: "This paper examines how implementing Tamil tokenizers from scratch for domain and task specific datasets.",
+    link: ""
+  }, {
+    title: "XLNet meets paraphrase detection",
+    journal: "ICTACT Journals",
+    date: "May 2025",
+    abstract: "This paper fine-tunes XLNet for paraphrase detection on MRPC, achieving strong benchmark-level performance.",
     link: ""
   }];
   const containerVariants = {
