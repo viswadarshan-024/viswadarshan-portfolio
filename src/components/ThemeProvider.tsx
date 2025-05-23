@@ -1,9 +1,7 @@
 
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect } from "react";
 
-type Theme = "dark" | "light" | "system";
-// type Theme = "dark";
-
+type Theme = "dark";
 
 type ThemeProviderProps = {
   children: React.ReactNode;
@@ -29,45 +27,27 @@ export function ThemeProvider({
   storageKey = "vite-ui-theme",
   ...props
 }: ThemeProviderProps) {
-  const [theme, setTheme] = useState<Theme>(() => {
-    // Get stored theme or use default
-    const storedTheme = localStorage.getItem(storageKey) as Theme;
-    return storedTheme || "dark";
-  });
+  // Always use dark theme
+  const theme: Theme = "dark";
 
   useEffect(() => {
     const root = window.document.documentElement;
     
-    // Remove any existing theme classes
-    root.classList.remove("light", "dark");
-    
-    if (theme === "system") {
-      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
-        .matches
-        ? "dark"
-        : "dark";
-        
-      root.classList.add(systemTheme);
-      return;
-    }
-    
-    // Add current theme class
-    root.classList.add(theme);
+    // Remove any existing theme classes and ensure dark theme is applied
+    root.classList.remove("light");
+    root.classList.add("dark");
     
     // Add data-theme attribute for better CSS targeting
-    root.setAttribute('data-theme', theme);
+    root.setAttribute('data-theme', 'dark');
     
     // Add theme transition classes for smoother changes
     root.classList.add('theme-transition');
-  }, [theme]);
+  }, []);
 
   // Apply initial theme settings
   useEffect(() => {
-    // Initialize theme if not already set
-    if (!localStorage.getItem(storageKey)) {
-      localStorage.setItem(storageKey, defaultTheme);
-      setTheme(defaultTheme);
-    }
+    // Initialize theme to dark
+    localStorage.setItem(storageKey, 'dark');
     
     // Apply transition classes for smoother theme changes
     const root = window.document.documentElement;
@@ -75,13 +55,12 @@ export function ThemeProvider({
     
     // Add page transition classes
     document.body.classList.add('transition-opacity', 'duration-300');
-  }, [storageKey, defaultTheme]);
+  }, [storageKey]);
 
   const value = {
     theme,
-    setTheme: (theme: Theme) => {
-      localStorage.setItem(storageKey, theme);
-      setTheme(theme);
+    setTheme: () => {
+      // Do nothing - we only use dark theme
     },
   };
 
