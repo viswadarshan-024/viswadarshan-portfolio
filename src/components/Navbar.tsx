@@ -1,5 +1,3 @@
-
-
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
@@ -15,7 +13,7 @@ export default function Navbar() {
     { name: "About", path: "/about" },
     { name: "Research", path: "/research" },
     { name: "Projects", path: "/projects" },
-    { name: "Blogs", path: "/blog" }
+    { name: "Blogs", path: "/blog" },
     { name: "Contact", path: "/contact" }
   ];
 
@@ -23,7 +21,6 @@ export default function Navbar() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
