@@ -13,8 +13,11 @@ export default function Navbar() {
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
+    { name: "Research", path: "/research" },
     { name: "Projects", path: "/projects" },
+    { name: "Blogs", path: "/blog" }
     { name: "Contact", path: "/contact" }
+    
   ];
 
   useEffect(() => {
