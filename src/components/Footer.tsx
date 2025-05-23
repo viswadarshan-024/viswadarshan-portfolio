@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Github, Linkedin, Twitter, Mail } from "lucide-react";
 
@@ -57,7 +56,8 @@ export default function Footer() {
                   About
                 </Link>
               </li>
-              <Link 
+              <li>
+                <Link 
                   to="/research" 
                   className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group"
                 >
@@ -74,8 +74,8 @@ export default function Footer() {
                   Projects
                 </Link>
               </li>
-              </li>
-              <Link 
+              <li>
+                <Link 
                   to="/blog" 
                   className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group"
                 >
