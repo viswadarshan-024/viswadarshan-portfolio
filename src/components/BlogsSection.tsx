@@ -6,31 +6,22 @@ import { Button } from "./ui/button";
 export default function BlogsSection() {
   const blogs = [
     {
-      title: "The Future of UI Design in 2024",
-      excerpt: "Exploring upcoming trends in user interface design, from neumorphism evolution to adaptive color systems.",
-      date: "April 15, 2024",
-      readTime: "5 min read",
-      tags: ["UI Design", "Trends"],
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
-      link: "#"
+      title: "Fine-Tuning BERT for Paraphrase Detection: A Step-by-Step Guide",
+      excerpt: "This article provides a step-by-step guide to fine-tuning BERT for paraphrase detection task using the benchmark datasets.",
+      date: "Mar 16, 2025",
+      readTime: "7 min read",
+      tags: ["NLP", "Paraphrase Detection"],
+      image: "Birthday.png",
+      link: "https://medium.com/@viswadarshanrramiya/fine-tuning-bert-for-paraphrase-detection-a-step-by-step-guide-54fc90836d0d"
     },
     {
-      title: "Building Ethical AI Models",
-      excerpt: "How to approach AI development with ethical considerations at the forefront of your design process.",
-      date: "March 22, 2024",
-      readTime: "8 min read",
-      tags: ["AI", "Ethics"],
-      image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c",
-      link: "#"
-    },
-    {
-      title: "Optimizing React Performance",
-      excerpt: "Practical techniques to improve your React application's performance without sacrificing developer experience.",
-      date: "February 10, 2024",
-      readTime: "6 min read",
-      tags: ["React", "Performance"],
-      image: "https://images.unsplash.com/photo-1593720213428-28a5b9e94613",
-      link: "#"
+      title: "Is Paraphrase Detection Still a Challenge in the Era of Sentence Transformers?",
+      excerpt: "In the era of Sentence Transformers, paraphrase detection isn't solved — it's evolving.",
+      date: "May 23, 2025",
+      readTime: "3 min read",
+      tags: ["SBERT", "Paraphrase Detection"],
+      image: "Your paragraph text.jpg",
+      link: "https://medium.com/@viswadarshanrramiya/is-paraphrase-detection-still-a-challenge-in-the-era-of-sentence-transformers-0d9be3f3b672"
     }
   ];
 
